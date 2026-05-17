@@ -4,239 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insights — Yacine Berini</title>
-  <meta name="description" content="Insights premium de Yacine Berini sur transformation digitale, adoption IA, change management et usages numériques." />
+  <meta name="description" content="Insights de Yacine Berini sur transformation digitale, adoption IA, change management et usages numériques." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
 
   <style>
-    .insights-page {
-      width: min(1470px, calc(100% - 56px));
+    .insights-clean-premium {
+      width: min(1360px, calc(100% - 56px));
       margin: 92px auto 90px;
     }
 
-    .insights-hero {
-      position: relative;
-      min-height: 560px;
-      border-radius: 38px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(circle at 82% 18%, rgba(37,225,238,.18), transparent 34%),
-        radial-gradient(circle at 18% 78%, rgba(191,255,103,.08), transparent 32%),
-        linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
-      overflow: hidden;
-      box-shadow: 0 40px 140px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
-      padding: 56px;
+    .clean-hero {
+      padding: 72px 0 56px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 42px;
-      align-items: center;
+      grid-template-columns: 1fr .72fr;
+      gap: 72px;
+      align-items: end;
     }
 
-    .insights-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 72px 72px;
-      opacity: .72;
-      mask-image: radial-gradient(circle at 72% 42%, black, transparent 72%);
-    }
-
-    .insights-copy,
-    .signal-board {
-      position: relative;
-      z-index: 2;
-    }
-
-    .insights-copy h1 {
-      max-width: 860px;
-      font-size: clamp(52px, 6vw, 96px);
-      line-height: .96;
-      letter-spacing: -.08em;
-    }
-
-    .insights-copy p {
-      margin-top: 24px;
-      max-width: 720px;
-      color: var(--soft);
-      line-height: 1.75;
-      font-size: 18px;
-    }
-
-    .signal-board {
-      min-height: 400px;
-      border-radius: 34px;
-      border: 1px solid rgba(180,210,235,.14);
-      background:
-        radial-gradient(circle at 50% 30%, rgba(37,225,238,.14), transparent 36%),
-        rgba(5,13,25,.45);
-      padding: 26px;
-      display: grid;
-      grid-template-rows: auto 1fr;
-      overflow: hidden;
-    }
-
-    .signal-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--soft);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .12em;
+    .clean-hero .kicker-clean {
+      color: var(--cyan);
       text-transform: uppercase;
-    }
-
-    .signal-led {
-      display: flex;
-      gap: 7px;
-    }
-
-    .signal-led span {
-      width: 9px;
-      height: 9px;
-      border-radius: 99px;
-      background: rgba(255,255,255,.22);
-    }
-
-    .signal-led span:first-child {
-      background: var(--cyan);
-      box-shadow: 0 0 18px rgba(37,225,238,.75);
-    }
-
-    .signal-body {
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-
-    .signal-ring {
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      border-radius: 50%;
-      border: 1px solid rgba(37,225,238,.20);
-      box-shadow: 0 0 0 60px rgba(37,225,238,.035), 0 0 80px rgba(37,225,238,.12);
-      animation: signalPulse 6s ease-in-out infinite;
-    }
-
-    .signal-ring::before,
-    .signal-ring::after {
-      content: "";
-      position: absolute;
-      inset: 55px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.12);
-    }
-
-    .signal-ring::after {
-      inset: 110px;
-      border-color: rgba(191,255,103,.18);
-    }
-
-    .signal-core {
-      position: relative;
-      z-index: 2;
-      width: 148px;
-      height: 148px;
-      border-radius: 38px;
-      background: linear-gradient(135deg, var(--cyan), var(--lime));
-      color: #06111c;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      font-weight: 900;
-      letter-spacing: -.04em;
-      box-shadow: 0 24px 90px rgba(37,225,238,.24);
-    }
-
-    .floating-note {
-      position: absolute;
-      z-index: 3;
-      border-radius: 999px;
-      border: 1px solid rgba(180,210,235,.16);
-      background: rgba(5,13,25,.72);
-      backdrop-filter: blur(18px);
-      padding: 10px 13px;
+      letter-spacing: .18em;
       font-size: 13px;
-      font-weight: 800;
-      color: #d8e3ef;
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      font-weight: 900;
+      margin-bottom: 22px;
     }
 
-    .note-1 { top: 44px; left: 50%; transform: translateX(-50%); }
-    .note-2 { right: 18px; top: 48%; }
-    .note-3 { bottom: 44px; left: 50%; transform: translateX(-50%); }
-    .note-4 { left: 18px; top: 48%; }
-
-    @keyframes signalPulse {
-      0%, 100% { transform: scale(.96); opacity: .85; }
-      50% { transform: scale(1.04); opacity: 1; }
+    .clean-hero h1 {
+      max-width: 900px;
+      font-size: clamp(62px, 7vw, 118px);
+      line-height: .9;
+      letter-spacing: -.095em;
     }
 
-    .editorial-layout {
-      margin-top: 78px;
+    .clean-hero p {
+      color: var(--soft);
+      line-height: 1.8;
+      font-size: 18px;
+      max-width: 560px;
+    }
+
+    .hero-note {
+      border-left: 2px solid var(--cyan);
+      padding-left: 22px;
+    }
+
+    .featured-clean {
+      margin-top: 62px;
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 22px;
-      align-items: stretch;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
     }
 
-    .hero-article {
-      min-height: 520px;
+    .feature-card {
+      min-height: 410px;
       border-radius: 34px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(circle at 88% 12%, rgba(37,225,238,.13), transparent 38%),
-        linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.024));
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 32px 110px rgba(0,0,0,.30);
+        radial-gradient(circle at 85% 12%, rgba(37,225,238,.10), transparent 34%),
+        rgba(255,255,255,.032);
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .hero-article::after {
-      content: "";
-      position: absolute;
-      right: -120px;
-      top: -120px;
-      width: 330px;
-      height: 330px;
-      border-radius: 999px;
-      border: 1px solid rgba(37,225,238,.20);
-      box-shadow: 0 0 90px rgba(37,225,238,.12);
-    }
-
-    .pill-label {
-      display: inline-flex;
-      border-radius: 999px;
-      border: 1px solid rgba(37,225,238,.22);
-      background: rgba(37,225,238,.07);
-      padding: 10px 13px;
-      color: #dffbff;
+    .feature-card small,
+    .small-card small,
+    .micro-card small {
+      color: var(--cyan);
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: .14em;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      margin-bottom: 28px;
     }
 
-    .hero-article h2 {
-      position: relative;
-      z-index: 2;
-      max-width: 880px;
-      font-size: clamp(42px, 5vw, 78px);
-      line-height: .95;
+    .feature-card h2 {
+      margin-top: 28px;
+      max-width: 860px;
+      font-size: clamp(42px, 5vw, 76px);
+      line-height: .96;
       letter-spacing: -.078em;
     }
 
-    .hero-article p {
-      position: relative;
-      z-index: 2;
+    .feature-card p {
       margin-top: 24px;
       max-width: 760px;
       color: var(--soft);
@@ -244,254 +99,222 @@
       font-size: 18px;
     }
 
-    .quote-line {
-      position: relative;
-      z-index: 2;
-      margin-top: 34px;
-      padding-left: 22px;
-      border-left: 2px solid var(--cyan);
-      color: #f4f8ff;
-      font-size: 22px;
-      line-height: 1.45;
-      letter-spacing: -.035em;
-      max-width: 720px;
+    .feature-bottom {
+      margin-top: 42px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .article-stack {
+    .feature-bottom span {
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.035);
+      color: #d7e3ef;
+      border-radius: 999px;
+      padding: 10px 13px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .small-column {
       display: grid;
       gap: 18px;
     }
 
-    .stack-card {
-      min-height: 160px;
+    .small-card {
       border-radius: 28px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(circle at 88% 0%, rgba(37,225,238,.10), transparent 36%),
-        rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.032);
       padding: 28px;
-      transition: .42s cubic-bezier(.19,1,.22,1);
+      min-height: 196px;
+      transition: .35s cubic-bezier(.19,1,.22,1);
     }
 
-    .stack-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(37,225,238,.34);
+    .small-card:hover,
+    .micro-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37,225,238,.25);
+      background: rgba(255,255,255,.045);
     }
 
-    .stack-card small {
-      display: block;
-      color: var(--cyan);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+    .small-card h3 {
+      margin-top: 16px;
+      font-size: 30px;
+      line-height: .98;
+      letter-spacing: -.065em;
     }
 
-    .stack-card h3 {
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: -.06em;
-      margin-bottom: 12px;
-    }
-
-    .stack-card p {
+    .small-card p {
+      margin-top: 14px;
       color: var(--soft);
       line-height: 1.65;
     }
 
-    .insights-strip {
+    .principles {
       margin-top: 78px;
+      padding: 34px 0;
       border-top: 1px solid rgba(255,255,255,.08);
       border-bottom: 1px solid rgba(255,255,255,.08);
-      padding: 34px 0;
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 36px;
-      align-items: center;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 44px;
+      align-items: start;
     }
 
-    .insights-strip h2 {
-      font-size: clamp(38px, 4.5vw, 68px);
-      line-height: .98;
-      letter-spacing: -.075em;
+    .principles h2 {
+      font-size: clamp(40px, 5vw, 74px);
+      line-height: .96;
+      letter-spacing: -.078em;
     }
 
-    .strip-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .principle-list {
+      display: grid;
+      gap: 0;
     }
 
-    .strip-tags span {
-      border-radius: 999px;
-      border: 1px solid rgba(180,210,235,.16);
-      background: rgba(255,255,255,.035);
-      padding: 12px 16px;
-      color: #d7e3ef;
-      font-weight: 800;
-      transition: .3s cubic-bezier(.19,1,.22,1);
+    .principle-row {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,.075);
     }
 
-    .strip-tags span:hover {
-      transform: translateY(-3px);
-      border-color: rgba(37,225,238,.34);
-      background: rgba(37,225,238,.08);
+    .principle-row:last-child {
+      border-bottom: 0;
     }
 
-    .thought-grid {
+    .principle-row span {
+      color: var(--cyan);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      font-size: 24px;
+    }
+
+    .principle-row strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: -.055em;
+      margin-bottom: 8px;
+    }
+
+    .principle-row p {
+      color: var(--soft);
+      line-height: 1.65;
+      max-width: 760px;
+    }
+
+    .micro-grid {
       margin-top: 78px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .thought-card {
-      min-height: 320px;
+    .micro-card {
+      min-height: 300px;
       border-radius: 30px;
-      border: 1px solid var(--line);
-      background:
-        linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.022));
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.032);
       padding: 30px;
-      position: relative;
-      overflow: hidden;
-      transition: .42s cubic-bezier(.19,1,.22,1);
+      transition: .35s cubic-bezier(.19,1,.22,1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .thought-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(37,225,238,.34);
-      box-shadow: 0 28px 100px rgba(0,0,0,.27);
-    }
-
-    .thought-card::before {
-      content: "";
-      position: absolute;
-      right: -80px;
-      bottom: -80px;
-      width: 220px;
-      height: 220px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(37,225,238,.12), transparent 68%);
-    }
-
-    .thought-card .num {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 16px;
-      border: 1px solid rgba(37,225,238,.24);
-      background: rgba(37,225,238,.08);
-      color: var(--cyan);
-      font-weight: 900;
-      margin-bottom: 24px;
-    }
-
-    .thought-card h3 {
-      position: relative;
-      z-index: 2;
+    .micro-card h3 {
+      margin-top: 20px;
       font-size: 34px;
       line-height: .98;
       letter-spacing: -.07em;
-      margin-bottom: 16px;
     }
 
-    .thought-card p {
-      position: relative;
-      z-index: 2;
+    .micro-card p {
       color: var(--soft);
       line-height: 1.68;
-      font-size: 16px;
+      margin-top: 18px;
     }
 
-    .belief-banner {
+    .micro-card .arrow {
+      margin-top: 32px;
+      color: var(--cyan);
+      font-size: 24px;
+    }
+
+    .closing-clean {
       margin-top: 78px;
-      border-radius: 36px;
-      border: 1px solid var(--line);
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(circle at 12% 20%, rgba(37,225,238,.13), transparent 34%),
-        linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.022));
-      padding: 44px;
+        linear-gradient(135deg, rgba(37,225,238,.08), rgba(255,255,255,.025));
+      padding: 40px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
       align-items: center;
     }
 
-    .belief-banner h2 {
-      font-size: clamp(42px, 5vw, 76px);
+    .closing-clean h2 {
+      font-size: clamp(38px, 4vw, 64px);
       line-height: .98;
-      letter-spacing: -.078em;
+      letter-spacing: -.075em;
+      max-width: 840px;
     }
 
-    .belief-points {
-      display: grid;
-      gap: 12px;
-    }
-
-    .belief-point {
-      border-radius: 22px;
-      border: 1px solid rgba(180,210,235,.14);
-      background: rgba(255,255,255,.035);
-      padding: 18px 20px;
+    .closing-clean p {
       color: var(--soft);
-      line-height: 1.55;
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 720px;
     }
 
-    .belief-point strong {
-      color: #f4f8ff;
-      margin-right: 6px;
-    }
-
-    .reveal-soft {
+    .reveal-clean {
       opacity: 0;
-      transform: translateY(26px);
-      transition: opacity .85s cubic-bezier(.19,1,.22,1), transform .85s cubic-bezier(.19,1,.22,1);
+      transform: translateY(22px);
+      transition: opacity .75s cubic-bezier(.19,1,.22,1), transform .75s cubic-bezier(.19,1,.22,1);
     }
 
-    .reveal-soft.visible {
+    .reveal-clean.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
     @media (max-width: 980px) {
-      .insights-hero,
-      .editorial-layout,
-      .insights-strip,
-      .belief-banner {
-        grid-template-columns: 1fr;
-      }
-
-      .thought-grid {
+      .clean-hero,
+      .featured-clean,
+      .principles,
+      .micro-grid,
+      .closing-clean {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 680px) {
-      .insights-page {
-        width: min(100% - 28px, 1470px);
-        margin-top: 56px;
+      .insights-clean-premium {
+        width: min(100% - 28px, 1360px);
+        margin-top: 54px;
       }
 
-      .insights-hero,
-      .hero-article,
-      .belief-banner {
-        padding: 28px;
-        border-radius: 28px;
+      .clean-hero {
+        padding-top: 40px;
       }
 
-      .signal-board {
-        min-height: 320px;
+      .clean-hero h1 {
+        font-size: 56px;
       }
 
-      .signal-ring {
-        width: 240px;
-        height: 240px;
+      .feature-card,
+      .small-card,
+      .micro-card,
+      .closing-clean {
+        padding: 24px;
+        border-radius: 24px;
       }
 
-      .floating-note {
-        display: none;
+      .principle-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
     }
   </style>
@@ -516,129 +339,135 @@
     </nav>
   </header>
 
-  <main class="insights-page">
-    <section class="insights-hero">
-      <div class="insights-copy reveal-soft">
-        <p class="kicker">Insights</p>
-        <h1>Une vision terrain des transformations digitales.</h1>
-        <p>
-          Des angles de réflexion courts, lisibles et utiles pour montrer ma compréhension
-          des enjeux d’adoption, d’IA générative, de change management et de digital workplace.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="contact.html">Échanger sur vos enjeux <span>→</span></a>
-          <a class="btn secondary" href="expertises.html">Voir mes expertises <span>→</span></a>
-        </div>
+  <main class="insights-clean-premium">
+    <section class="clean-hero reveal-clean">
+      <div>
+        <p class="kicker-clean">Insights</p>
+        <h1>Des idées claires pour des transformations utiles.</h1>
       </div>
-
-      <div class="signal-board reveal-soft">
-        <div class="signal-top">
-          <span>Transformation Radar</span>
-          <div class="signal-led"><span></span><span></span><span></span></div>
-        </div>
-        <div class="signal-body">
-          <div class="signal-ring"></div>
-          <div class="signal-core">Usages<br>Adoption<br>Impact</div>
-          <div class="floating-note note-1">IA utile</div>
-          <div class="floating-note note-2">Change</div>
-          <div class="floating-note note-3">Pilotage</div>
-          <div class="floating-note note-4">Terrain</div>
-        </div>
-      </div>
+      <p class="hero-note">
+        Une sélection de réflexions courtes sur l’adoption, l’IA générative, le change management et les usages numériques.
+      </p>
     </section>
 
-    <section class="editorial-layout">
-      <article class="hero-article reveal-soft">
-        <span class="pill-label">Point de vue</span>
-        <h2>L’adoption est plus importante que le déploiement.</h2>
-        <p>
-          Un outil déployé n’est pas un outil adopté. La vraie valeur apparaît lorsque les équipes
-          comprennent son utilité, l’intègrent dans leurs routines et gagnent en autonomie.
-        </p>
-        <div class="quote-line">
-          La transformation réussie n’est pas celle qui livre un outil. C’est celle qui change durablement les usages.
+    <section class="featured-clean">
+      <article class="feature-card reveal-clean">
+        <div>
+          <small>Point de vue principal</small>
+          <h2>L’adoption est plus importante que le déploiement.</h2>
+          <p>
+            Un outil installé ne transforme rien à lui seul. La valeur apparaît quand les équipes comprennent,
+            utilisent et intègrent l’outil dans leurs pratiques quotidiennes.
+          </p>
+        </div>
+        <div class="feature-bottom">
+          <span>Adoption</span>
+          <span>Usages</span>
+          <span>Change</span>
+          <span>Impact</span>
         </div>
       </article>
 
-      <div class="article-stack">
-        <article class="stack-card reveal-soft">
+      <div class="small-column">
+        <article class="small-card reveal-clean">
           <small>IA générative</small>
-          <h3>Une IA utile est une IA comprise.</h3>
-          <p>Les collaborateurs ont besoin de cas concrets, d’un cadre clair et de pratiques simples.</p>
+          <h3>Rendre l’IA concrète.</h3>
+          <p>Partir des cas d’usage métier, pas de la technologie.</p>
         </article>
 
-        <article class="stack-card reveal-soft">
+        <article class="small-card reveal-clean">
           <small>Digital workplace</small>
-          <h3>Les outils doivent réduire la complexité.</h3>
-          <p>Un bon environnement numérique rend l’information plus accessible et les usages plus fluides.</p>
-        </article>
-
-        <article class="stack-card reveal-soft">
-          <small>Change management</small>
-          <h3>Le terrain doit guider l’accompagnement.</h3>
-          <p>Les irritants utilisateurs sont souvent les meilleurs indicateurs pour ajuster le dispositif.</p>
+          <h3>Simplifier l’environnement.</h3>
+          <p>Un bon outil rend l’information plus accessible et l’action plus fluide.</p>
         </article>
       </div>
     </section>
 
-    <section class="insights-strip reveal-soft">
-      <h2>Les sujets que je regarde en priorité.</h2>
-      <div class="strip-tags">
-        <span>Adoption IA</span>
-        <span>Digital workplace</span>
-        <span>Conduite du changement</span>
-        <span>Formation</span>
-        <span>Relais terrain</span>
-        <span>Mesure d’impact</span>
+    <section class="principles reveal-clean">
+      <h2>Ce que je regarde avant tout.</h2>
+
+      <div class="principle-list">
+        <div class="principle-row">
+          <span>01</span>
+          <div>
+            <strong>La compréhension</strong>
+            <p>Les utilisateurs savent-ils pourquoi le changement existe et ce qu’il leur apporte ?</p>
+          </div>
+        </div>
+
+        <div class="principle-row">
+          <span>02</span>
+          <div>
+            <strong>L’utilité terrain</strong>
+            <p>Le dispositif répond-il à un besoin réel ou ajoute-t-il une couche de complexité ?</p>
+          </div>
+        </div>
+
+        <div class="principle-row">
+          <span>03</span>
+          <div>
+            <strong>L’autonomie</strong>
+            <p>Les équipes peuvent-elles avancer seules grâce aux supports, relais et méthodes ?</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="thought-grid">
-      <article class="thought-card reveal-soft">
-        <span class="num">01</span>
-        <h3>Former ne suffit pas.</h3>
-        <p>La formation lance l’usage. L’accompagnement, les supports et les relais permettent de l’ancrer.</p>
+    <section class="micro-grid">
+      <article class="micro-card reveal-clean">
+        <div>
+          <small>Insight 01</small>
+          <h3>Former ne suffit pas.</h3>
+          <p>L’accompagnement doit continuer après le déploiement pour ancrer les usages.</p>
+        </div>
+        <div class="arrow">→</div>
       </article>
 
-      <article class="thought-card reveal-soft">
-        <span class="num">02</span>
-        <h3>La pédagogie est stratégique.</h3>
-        <p>Rendre les sujets simples et actionnables est indispensable pour embarquer les équipes.</p>
+      <article class="micro-card reveal-clean">
+        <div>
+          <small>Insight 02</small>
+          <h3>La pédagogie crée l’adoption.</h3>
+          <p>Rendre les sujets simples et actionnables permet d’embarquer les équipes.</p>
+        </div>
+        <div class="arrow">→</div>
       </article>
 
-      <article class="thought-card reveal-soft">
-        <span class="num">03</span>
-        <h3>La mesure rend le change pilotable.</h3>
-        <p>Les indicateurs d’usage et les retours terrain permettent d’améliorer le dispositif en continu.</p>
+      <article class="micro-card reveal-clean">
+        <div>
+          <small>Insight 03</small>
+          <h3>Mesurer rend le change pilotable.</h3>
+          <p>Les indicateurs et retours terrain permettent d’ajuster le dispositif.</p>
+        </div>
+        <div class="arrow">→</div>
       </article>
     </section>
 
-    <section class="belief-banner reveal-soft">
-      <h2>Ce que je défends dans chaque transformation.</h2>
-      <div class="belief-points">
-        <div class="belief-point"><strong>Clarté.</strong> Des objectifs et messages compréhensibles.</div>
-        <div class="belief-point"><strong>Utilité.</strong> Des outils alignés avec les besoins terrain.</div>
-        <div class="belief-point"><strong>Adoption.</strong> Des utilisateurs accompagnés jusqu’à l’autonomie.</div>
-        <div class="belief-point"><strong>Durabilité.</strong> Des usages mesurés, ajustés et ancrés.</div>
+    <section class="closing-clean reveal-clean">
+      <div>
+        <h2>Une transformation réussie est comprise, adoptée et durable.</h2>
+        <p>
+          C’est cette logique que j’applique dans mes missions : relier les outils, les métiers et les utilisateurs.
+        </p>
       </div>
+      <a class="btn primary" href="contact.html">Échanger <span>→</span></a>
     </section>
   </main>
 
   <script>
-    const revealItems = document.querySelectorAll(".reveal-soft");
+    const revealItems = document.querySelectorAll(".reveal-clean");
 
-    const revealObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.16 });
 
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index * 0.055, 0.36)}s`;
-      revealObserver.observe(item);
+      item.style.transitionDelay = `${Math.min(index * 0.06, 0.3)}s`;
+      observer.observe(item);
     });
   </script>
 </body>
