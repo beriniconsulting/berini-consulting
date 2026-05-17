@@ -11,7 +11,7 @@
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "framer-motion": "latest",
-    "lucide-react": "latest",
+    "lucide-react": "0.468.0",
     "next": "latest",
     "postcss": "latest",
     "react": "latest",
