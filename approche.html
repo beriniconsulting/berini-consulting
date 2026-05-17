@@ -4,12 +4,372 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Approche — Yacine Berini</title>
-  <meta name="description" content="Yacine Berini, consultant transformation digitale, AMOA, change management et adoption IA." />
+  <meta name="description" content="Méthodologie premium de transformation digitale, AMOA, change management et adoption IA par Yacine Berini." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <style>
+    .approach-premium {
+      width: min(1470px, calc(100% - 56px));
+      margin: 92px auto 90px;
+      position: relative;
+    }
+
+    .approach-hero {
+      min-height: 520px;
+      border-radius: 38px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 76% 20%, rgba(37,225,238,.18), transparent 34%),
+        radial-gradient(circle at 22% 78%, rgba(191,255,103,.08), transparent 32%),
+        linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+      box-shadow: 0 40px 140px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 40px;
+      align-items: center;
+      padding: 56px;
+    }
+
+    .approach-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: .75;
+      mask-image: radial-gradient(circle at 70% 40%, black, transparent 72%);
+    }
+
+    .approach-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .approach-copy h1 {
+      max-width: 820px;
+      font-size: clamp(52px, 6.2vw, 98px);
+      line-height: .96;
+      letter-spacing: -.08em;
+    }
+
+    .approach-copy p {
+      margin-top: 24px;
+      color: var(--soft);
+      line-height: 1.75;
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .approach-visual {
+      position: relative;
+      z-index: 2;
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit-system {
+      position: relative;
+      width: min(440px, 100%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(37,225,238,.22);
+      background:
+        radial-gradient(circle at center, rgba(37,225,238,.16), transparent 24%),
+        radial-gradient(circle at center, rgba(191,255,103,.08), transparent 46%);
+      box-shadow: 0 0 80px rgba(37,225,238,.12), inset 0 0 80px rgba(37,225,238,.05);
+      animation: pulseOrbit 6s ease-in-out infinite;
+    }
+
+    .orbit-system::before,
+    .orbit-system::after {
+      content: "";
+      position: absolute;
+      inset: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .orbit-system::after {
+      inset: 96px;
+      border-color: rgba(191,255,103,.18);
+    }
+
+    .core {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 118px;
+      height: 118px;
+      transform: translate(-50%, -50%);
+      border-radius: 32px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      background: linear-gradient(135deg, var(--cyan), var(--lime));
+      color: #06111c;
+      box-shadow: 0 20px 90px rgba(37,225,238,.24);
+    }
+
+    .orbit-dot {
+      position: absolute;
+      width: 86px;
+      height: 86px;
+      border-radius: 28px;
+      border: 1px solid rgba(180,210,235,.18);
+      background: rgba(5,13,25,.72);
+      backdrop-filter: blur(18px);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 24px 70px rgba(0,0,0,.32);
+    }
+
+    .dot-1 { left: 50%; top: -20px; transform: translateX(-50%); }
+    .dot-2 { right: -20px; top: 50%; transform: translateY(-50%); }
+    .dot-3 { left: 50%; bottom: -20px; transform: translateX(-50%); }
+    .dot-4 { left: -20px; top: 50%; transform: translateY(-50%); }
+
+    @keyframes pulseOrbit {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.025); filter: brightness(1.08); }
+    }
+
+    .approach-path {
+      margin-top: 78px;
+      display: grid;
+      gap: 24px;
+      position: relative;
+    }
+
+    .path-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(37,225,238,.45), rgba(191,255,103,.28), transparent);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .approach-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 94px 1fr;
+      gap: 28px;
+      align-items: center;
+      min-height: 210px;
+    }
+
+    .step-number-bubble {
+      position: relative;
+      z-index: 2;
+      width: 94px;
+      height: 94px;
+      border-radius: 32px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(37,225,238,.32);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(37,225,238,.20), transparent 48%),
+        rgba(5,13,25,.86);
+      box-shadow: 0 24px 90px rgba(0,0,0,.34), 0 0 45px rgba(37,225,238,.14);
+      color: var(--cyan);
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    .step-panel {
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 0%, rgba(37,225,238,.10), transparent 36%),
+        rgba(255,255,255,.035);
+      padding: 30px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
+      transition: .45s cubic-bezier(.19,1,.22,1);
+    }
+
+    .step-panel:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37,225,238,.34);
+      box-shadow: 0 28px 100px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.06);
+    }
+
+    .step-panel h2 {
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -.065em;
+      margin-bottom: 12px;
+    }
+
+    .step-panel p {
+      color: var(--soft);
+      line-height: 1.72;
+      font-size: 16px;
+    }
+
+    .step-tags {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .step-tags span {
+      border: 1px solid rgba(180,210,235,.16);
+      background: rgba(255,255,255,.035);
+      border-radius: 999px;
+      padding: 8px 11px;
+      color: #d7e3ef;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .step-empty {
+      min-height: 1px;
+    }
+
+    .impact-section {
+      margin-top: 84px;
+      border-radius: 36px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(37,225,238,.12), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.022));
+      padding: 44px;
+      box-shadow: 0 34px 110px rgba(0,0,0,.30);
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .impact-section h2 {
+      font-size: clamp(42px, 5vw, 76px);
+      line-height: .98;
+      letter-spacing: -.075em;
+      max-width: 760px;
+    }
+
+    .impact-section p {
+      color: var(--soft);
+      line-height: 1.75;
+      font-size: 18px;
+      margin-top: 18px;
+      max-width: 680px;
+    }
+
+    .impact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .impact-card {
+      border-radius: 24px;
+      border: 1px solid rgba(180,210,235,.15);
+      background: rgba(255,255,255,.035);
+      padding: 24px;
+    }
+
+    .impact-card strong {
+      display: block;
+      font-size: 32px;
+      letter-spacing: -.06em;
+      background: linear-gradient(110deg, var(--cyan), var(--lime));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .impact-card span {
+      color: var(--soft);
+      line-height: 1.45;
+    }
+
+    .reveal-soft {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .85s cubic-bezier(.19,1,.22,1), transform .85s cubic-bezier(.19,1,.22,1);
+    }
+
+    .reveal-soft.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .approach-hero,
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-step {
+        grid-template-columns: 70px 1fr;
+        gap: 18px;
+      }
+
+      .path-line {
+        left: 35px;
+      }
+
+      .step-number-bubble {
+        width: 70px;
+        height: 70px;
+        border-radius: 24px;
+      }
+
+      .step-empty {
+        display: none;
+      }
+
+      .impact-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .approach-premium {
+        width: min(100% - 28px, 1470px);
+        margin-top: 56px;
+      }
+
+      .approach-hero,
+      .impact-section {
+        padding: 28px;
+        border-radius: 28px;
+      }
+
+      .orbit-system {
+        width: 320px;
+      }
+
+      .orbit-dot {
+        width: 68px;
+        height: 68px;
+        border-radius: 22px;
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="navbar">
@@ -21,29 +381,132 @@
         <a href="index.html">Accueil</a>
         <a href="expertises.html">Expertises</a>
         <a href="realisations.html">Réalisations</a>
-        <a href="approche.html">Approche</a>
+        <a href="approche.html" class="active">Approche</a>
         <a href="insights.html">Insights</a>
         <a href="contact.html">Contact</a>
       </div>
       <a class="nav-cta" href="contact.html">Échanger <span>→</span></a>
     </nav>
   </header>
-  <main class="inner-page">
-  <section class="inner-hero">
-    <div>
-      <p class="kicker">Approche</p>
-      <h1>Faire adopter, pas seulement déployer.</h1>
-    </div>
-    <p>Une transformation réussie ne se limite pas à mettre un outil en production. Elle demande de créer les conditions d’une appropriation réelle par les équipes.</p>
-  </section>
 
-  <section class="method-row">
-    <article class="method-step"><div class="step-number">01</div><div><h3>Cadrer</h3><p>Comprendre les enjeux métiers, les irritants, les processus existants, les populations impactées et les objectifs de transformation.</p></div></article>
-    <article class="method-step"><div class="step-number">02</div><div><h3>Structurer</h3><p>Construire les supports, la documentation, la gouvernance, le planning, les relais et les espaces collaboratifs utiles.</p></div></article>
-    <article class="method-step"><div class="step-number">03</div><div><h3>Accompagner</h3><p>Former, acculturer, animer les communautés, organiser les ateliers, recueillir les retours et ajuster les dispositifs.</p></div></article>
-    <article class="method-step"><div class="step-number">04</div><div><h3>Mesurer</h3><p>Suivre les indicateurs d’adoption, les retours utilisateurs, les points de friction et les axes d’amélioration continue.</p></div></article>
-    <article class="method-step"><div class="step-number">05</div><div><h3>Ancrer</h3><p>Favoriser l’autonomie, capitaliser la connaissance, stabiliser les usages et faire durer les bénéfices de la transformation.</p></div></article>
-  </section>
-</main>
+  <main class="approach-premium">
+    <section class="approach-hero">
+      <div class="approach-copy reveal-soft">
+        <p class="kicker">Méthodologie</p>
+        <h1>Faire adopter, pas seulement déployer.</h1>
+        <p>
+          Une transformation réussie ne se limite pas à mettre un outil en production.
+          Elle demande de créer les conditions d’une appropriation réelle : comprendre les usages,
+          structurer le dispositif, embarquer les équipes, mesurer l’impact et ancrer les pratiques.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="realisations.html">Voir les cas clients <span>→</span></a>
+          <a class="btn secondary" href="contact.html">Échanger sur votre besoin <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="approach-visual reveal-soft">
+        <div class="orbit-system">
+          <div class="core">Adoption<br>durable</div>
+          <div class="orbit-dot dot-1">Cadrer</div>
+          <div class="orbit-dot dot-2">Former</div>
+          <div class="orbit-dot dot-3">Mesurer</div>
+          <div class="orbit-dot dot-4">Ancrer</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-path">
+      <div class="path-line"></div>
+
+      <article class="approach-step reveal-soft">
+        <div class="step-panel">
+          <h2>Comprendre le terrain</h2>
+          <p>Identifier les enjeux métiers, les irritants, les usages existants, les populations impactées et les conditions de réussite.</p>
+          <div class="step-tags"><span>Ateliers métiers</span><span>Irritants</span><span>Cartographie</span></div>
+        </div>
+        <div class="step-number-bubble">01</div>
+        <div class="step-empty"></div>
+      </article>
+
+      <article class="approach-step reveal-soft">
+        <div class="step-empty"></div>
+        <div class="step-number-bubble">02</div>
+        <div class="step-panel">
+          <h2>Structurer le dispositif</h2>
+          <p>Créer une trajectoire claire : gouvernance, supports, documentation, communication, relais terrain et espaces collaboratifs.</p>
+          <div class="step-tags"><span>Roadmap</span><span>Gouvernance</span><span>Supports</span></div>
+        </div>
+      </article>
+
+      <article class="approach-step reveal-soft">
+        <div class="step-panel">
+          <h2>Former & embarquer</h2>
+          <p>Déployer un accompagnement concret : formations, webinaires, ateliers pratiques, acculturation IA et animation de communautés.</p>
+          <div class="step-tags"><span>Formation</span><span>Acculturation IA</span><span>Communautés</span></div>
+        </div>
+        <div class="step-number-bubble">03</div>
+        <div class="step-empty"></div>
+      </article>
+
+      <article class="approach-step reveal-soft">
+        <div class="step-empty"></div>
+        <div class="step-number-bubble">04</div>
+        <div class="step-panel">
+          <h2>Mesurer l’adoption</h2>
+          <p>Suivre les indicateurs, analyser les retours utilisateurs, identifier les freins et ajuster les actions d’accompagnement.</p>
+          <div class="step-tags"><span>KPI</span><span>Feedback</span><span>Amélioration continue</span></div>
+        </div>
+      </article>
+
+      <article class="approach-step reveal-soft">
+        <div class="step-panel">
+          <h2>Ancrer dans la durée</h2>
+          <p>Favoriser l’autonomie, capitaliser les bonnes pratiques, structurer la connaissance et installer des usages durables.</p>
+          <div class="step-tags"><span>Autonomie</span><span>Knowledge management</span><span>Impact durable</span></div>
+        </div>
+        <div class="step-number-bubble">05</div>
+        <div class="step-empty"></div>
+      </article>
+    </section>
+
+    <section class="impact-section reveal-soft">
+      <div class="impact-grid">
+        <div>
+          <p class="kicker">Ce que ça change</p>
+          <h2>Une approche pensée pour créer de l’impact visible.</h2>
+          <p>
+            Mon rôle est de sécuriser le passage entre l’intention stratégique, l’outil déployé
+            et l’usage réel par les collaborateurs.
+          </p>
+        </div>
+
+        <div class="impact-cards">
+          <div class="impact-card"><strong>Clarté</strong><span>Des objectifs, rôles et messages compréhensibles.</span></div>
+          <div class="impact-card"><strong>Adoption</strong><span>Des utilisateurs accompagnés et réellement autonomes.</span></div>
+          <div class="impact-card"><strong>Mesure</strong><span>Des indicateurs pour piloter l’impact et ajuster.</span></div>
+          <div class="impact-card"><strong>Durabilité</strong><span>Des pratiques ancrées dans le quotidien des équipes.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal-soft");
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 0.08, 0.36)}s`;
+      revealObserver.observe(item);
+    });
+  </script>
 </body>
 </html>
