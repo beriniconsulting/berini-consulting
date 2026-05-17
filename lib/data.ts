@@ -2,7 +2,7 @@ import {
   BarChart3,
   Brain,
   Layers,
-  LineChart,
+  ChartLine,
   Network,
   Rocket,
   Sparkles,
@@ -66,7 +66,7 @@ export const skills = [
     text: "Formations, communautés, communication, supports utilisateurs, relais terrain.",
   },
   {
-    icon: LineChart,
+    icon: ChartLine,
     title: "Data & Pilotage",
     text: "Suivi de l’adoption, reporting, indicateurs, mesure d’impact, Power BI, Excel.",
   },
