@@ -4,12 +4,283 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Réalisations — Yacine Berini</title>
-  <meta name="description" content="Yacine Berini, consultant transformation digitale, AMOA, change management et adoption IA." />
+  <meta name="description" content="Réalisations de Yacine Berini : transformation digitale, AMOA, change management et adoption IA." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
+
+  <style>
+    .carousel-shell {
+      position: relative;
+      margin-top: 24px;
+    }
+
+    .carousel-viewport {
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 72% 10%, rgba(37,225,238,.11), transparent 34%),
+        rgba(255,255,255,.032);
+      box-shadow: 0 32px 110px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.045);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform .72s cubic-bezier(.19,1,.22,1);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 0;
+      min-height: 520px;
+    }
+
+    .slide-visual {
+      position: relative;
+      padding: 34px;
+      background:
+        radial-gradient(circle at 62% 42%, rgba(37,225,238,.22), transparent 34%),
+        linear-gradient(135deg, rgba(37,225,238,.10), rgba(191,255,103,.055));
+      overflow: hidden;
+    }
+
+    .slide-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 58px 58px;
+      opacity: .55;
+    }
+
+    .client-logo {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      min-height: 430px;
+      border-radius: 28px;
+      border: 1px solid rgba(180,210,235,.14);
+      background:
+        radial-gradient(circle at 60% 40%, rgba(5,9,20,.1), transparent 34%),
+        rgba(3,10,20,.38);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 34px;
+      overflow: hidden;
+    }
+
+    .client-logo::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      border: 1px solid rgba(37,225,238,.25);
+      box-shadow: 0 0 70px rgba(37,225,238,.16);
+    }
+
+    .client-logo strong {
+      position: relative;
+      z-index: 3;
+      font-size: clamp(46px, 6vw, 88px);
+      letter-spacing: -.08em;
+      line-height: .9;
+    }
+
+    .client-logo span {
+      position: relative;
+      z-index: 3;
+      margin-top: 14px;
+      color: var(--soft);
+      font-weight: 700;
+    }
+
+    .slide-content {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide-content .kicker {
+      margin-bottom: 18px;
+    }
+
+    .slide-content h2 {
+      font-size: clamp(42px, 4.7vw, 76px);
+      line-height: .98;
+      letter-spacing: -.075em;
+      max-width: 780px;
+    }
+
+    .slide-content p {
+      color: var(--soft);
+      line-height: 1.75;
+      font-size: 18px;
+      margin-top: 22px;
+      max-width: 780px;
+    }
+
+    .slide-actions {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .mini-kpi {
+      border-radius: 20px;
+      border: 1px solid rgba(180,210,235,.14);
+      background: rgba(255,255,255,.035);
+      padding: 18px;
+    }
+
+    .mini-kpi strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: -.06em;
+      background: linear-gradient(110deg, var(--cyan), var(--lime));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .mini-kpi span {
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .slide-list {
+      margin-top: 26px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .slide-list li {
+      list-style: none;
+      color: var(--soft);
+      line-height: 1.6;
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+    }
+
+    .slide-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--cyan);
+      margin-top: 9px;
+      box-shadow: 0 0 16px rgba(37,225,238,.65);
+      flex: 0 0 auto;
+    }
+
+    .carousel-controls {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .carousel-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .carousel-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: 1px solid rgba(180,210,235,.18);
+      background: rgba(255,255,255,.035);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      transition: .28s cubic-bezier(.19,1,.22,1);
+    }
+
+    .carousel-btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(37,225,238,.45);
+      background: rgba(37,225,238,.09);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,.20);
+      cursor: pointer;
+      transition: .32s cubic-bezier(.19,1,.22,1);
+    }
+
+    .dot.active {
+      width: 34px;
+      background: var(--cyan);
+      box-shadow: 0 0 20px rgba(37,225,238,.55);
+    }
+
+    .progress-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(180,210,235,.12);
+      overflow: hidden;
+    }
+
+    .progress-line span {
+      display: block;
+      height: 100%;
+      width: 25%;
+      background: linear-gradient(90deg, var(--cyan), var(--lime));
+      transition: transform .72s cubic-bezier(.19,1,.22,1);
+    }
+
+    .realisations-overview {
+      margin-top: 74px;
+    }
+
+    @media (max-width: 980px) {
+      .carousel-slide {
+        grid-template-columns: 1fr;
+      }
+
+      .slide-visual,
+      .slide-content {
+        padding: 28px;
+      }
+
+      .client-logo {
+        min-height: 280px;
+      }
+
+      .slide-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="navbar">
@@ -20,7 +291,7 @@
       <div class="nav-links">
         <a href="index.html">Accueil</a>
         <a href="expertises.html">Expertises</a>
-        <a href="realisations.html">Réalisations</a>
+        <a href="realisations.html" class="active">Réalisations</a>
         <a href="approche.html">Approche</a>
         <a href="insights.html">Insights</a>
         <a href="contact.html">Contact</a>
@@ -28,56 +299,208 @@
       <a class="nav-cta" href="contact.html">Échanger <span>→</span></a>
     </nav>
   </header>
+
   <main class="inner-page">
-  <section class="inner-hero">
-    <div>
-      <p class="kicker">Réalisations</p>
-      <h1>Des missions concrètes, orientées impact.</h1>
-    </div>
-    <p>Chaque réalisation est présentée pour montrer ce que j’apporte réellement : structuration, accompagnement, pilotage, formation, adoption et amélioration des usages.</p>
-  </section>
-
-  <section class="page-grid-2">
-    <article class="case-card">
-      <div class="case-top"><strong>URSSAF</strong></div>
-      <div class="case-body">
-        <h3>Adoption IA générative & outil de ticketing</h3>
-        <p>Accompagnement de plus de 800 collaborateurs autour de l’adoption d’une IA générative interne et d’un outil de ticketing.</p>
-        <ul><li>Création d’un portail IA : accueil, dictionnaire IA, agents IA, relais terrain, organigramme projet.</li><li>Formations, ateliers, portes ouvertes et acculturation IA générative.</li><li>Phase de test utilisateur pour adapter les outils aux besoins métiers.</li></ul>
-        <div class="tag-row"><span class="tag">+800 collaborateurs</span><span class="tag">IA générative</span><span class="tag">Change</span><span class="tag">Formation</span></div>
+    <section class="inner-hero">
+      <div>
+        <p class="kicker">Réalisations</p>
+        <h1>Des missions concrètes, orientées impact.</h1>
       </div>
-    </article>
+      <p>
+        Un aperçu des environnements où j’ai accompagné des transformations, structuré les usages
+        et sécurisé l’adoption par les collaborateurs.
+      </p>
+    </section>
 
-    <article class="case-card">
-      <div class="case-top"><strong>SNCF / Talan</strong></div>
-      <div class="case-body">
-        <h3>Pilotage transverse SI & gouvernance financière</h3>
-        <p>Coordination projet dans un environnement SI stratégique avec pilotage financier et reporting.</p>
-        <ul><li>Suivi d’un budget de 30M€.</li><li>Tableaux de bord, suivi des écarts et fiabilisation des données.</li><li>Coordination IT / finance et amélioration des processus.</li></ul>
-        <div class="tag-row"><span class="tag">30M€</span><span class="tag">PMO</span><span class="tag">Reporting</span><span class="tag">SI</span></div>
-      </div>
-    </article>
+    <section class="carousel-shell" aria-label="Carrousel des réalisations">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
 
-    <article class="case-card">
-      <div class="case-top"><strong>Association Aurore</strong></div>
-      <div class="case-body">
-        <h3>CRM & modernisation collaborative</h3>
-        <p>Modernisation des outils collaboratifs et structuration des usages autour de Microsoft 365, SharePoint et CRM.</p>
-        <ul><li>+300 collaborateurs concernés.</li><li>Recueil des besoins métiers et processus.</li><li>Procédures, base de connaissances et supports utilisateurs.</li></ul>
-        <div class="tag-row"><span class="tag">+300 collaborateurs</span><span class="tag">CRM</span><span class="tag">M365</span><span class="tag">AMOA</span></div>
-      </div>
-    </article>
+          <article class="carousel-slide">
+            <div class="slide-visual">
+              <div class="client-logo">
+                <strong>URSSAF</strong>
+                <span>Adoption IA générative & outil de ticketing</span>
+              </div>
+            </div>
+            <div class="slide-content">
+              <p class="kicker">Cas client 01</p>
+              <h2>Structurer l’adoption IA auprès de +800 collaborateurs.</h2>
+              <p>
+                Accompagnement des usages autour d’une IA générative interne et d’un outil de ticketing,
+                avec une logique d’acculturation, de formation et d’amélioration continue.
+              </p>
 
-    <article class="case-card">
-      <div class="case-top"><strong>SNCF Voyageurs</strong></div>
-      <div class="case-body">
-        <h3>Déploiement national mobile</h3>
-        <p>Coordination d’un programme national de renouvellement d’équipements mobiles et accompagnement des relais terrain.</p>
-        <ul><li>32 000 équipements mobiles coordonnés.</li><li>Création d’un site SharePoint projet.</li><li>Animation des relais locaux et accompagnement terrain.</li></ul>
-        <div class="tag-row"><span class="tag">32K équipements</span><span class="tag">SharePoint</span><span class="tag">Relais terrain</span></div>
+              <div class="slide-actions">
+                <div class="mini-kpi"><strong>+800</strong><span>collaborateurs accompagnés</span></div>
+                <div class="mini-kpi"><strong>IA</strong><span>acculturation & agents métier</span></div>
+                <div class="mini-kpi"><strong>Change</strong><span>formation & relais terrain</span></div>
+              </div>
+
+              <ul class="slide-list">
+                <li>Création d’un portail IA : accueil, dictionnaire IA, agents IA et organigramme projet.</li>
+                <li>Animation de formations, ateliers, portes ouvertes et sessions d’acculturation IA.</li>
+                <li>Phase de test utilisateur pour adapter les outils aux besoins réels des métiers.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <div class="slide-visual">
+              <div class="client-logo">
+                <strong>SNCF</strong>
+                <span>Pilotage transverse SI & gouvernance financière</span>
+              </div>
+            </div>
+            <div class="slide-content">
+              <p class="kicker">Cas client 02</p>
+              <h2>Piloter un programme SI stratégique avec visibilité et méthode.</h2>
+              <p>
+                Coordination projet dans un environnement SI transverse, avec pilotage financier,
+                reporting, fiabilisation des données et amélioration des processus.
+              </p>
+
+              <div class="slide-actions">
+                <div class="mini-kpi"><strong>30M€</strong><span>budget SI suivi</span></div>
+                <div class="mini-kpi"><strong>PMO</strong><span>coordination transverse</span></div>
+                <div class="mini-kpi"><strong>Data</strong><span>reporting & tableaux de bord</span></div>
+              </div>
+
+              <ul class="slide-list">
+                <li>Suivi et pilotage d’un budget SI de 30M€.</li>
+                <li>Tableaux de bord, suivi des écarts et fiabilisation des données.</li>
+                <li>Coordination entre parties prenantes IT, métiers et finance.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <div class="slide-visual">
+              <div class="client-logo">
+                <strong>Aurore</strong>
+                <span>CRM & modernisation collaborative</span>
+              </div>
+            </div>
+            <div class="slide-content">
+              <p class="kicker">Cas client 03</p>
+              <h2>Moderniser les usages collaboratifs et structurer la connaissance.</h2>
+              <p>
+                Accompagnement de la modernisation des outils collaboratifs autour de Microsoft 365,
+                SharePoint et CRM, avec une approche AMOA et adoption utilisateurs.
+              </p>
+
+              <div class="slide-actions">
+                <div class="mini-kpi"><strong>+300</strong><span>collaborateurs concernés</span></div>
+                <div class="mini-kpi"><strong>CRM</strong><span>processus & besoins métiers</span></div>
+                <div class="mini-kpi"><strong>M365</strong><span>SharePoint & documentation</span></div>
+              </div>
+
+              <ul class="slide-list">
+                <li>Déploiement Microsoft 365, SharePoint et CRM interne.</li>
+                <li>Recueil des besoins métiers et structuration des processus.</li>
+                <li>Création de procédures, bases de connaissances et supports utilisateurs.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <div class="slide-visual">
+              <div class="client-logo">
+                <strong>SNCF</strong>
+                <span>Déploiement national mobile</span>
+              </div>
+            </div>
+            <div class="slide-content">
+              <p class="kicker">Cas client 04</p>
+              <h2>Coordonner un déploiement terrain à grande échelle.</h2>
+              <p>
+                Coordination d’un programme national de renouvellement d’équipements mobiles,
+                avec support des relais locaux et centralisation des ressources projet.
+              </p>
+
+              <div class="slide-actions">
+                <div class="mini-kpi"><strong>32K</strong><span>équipements mobiles</span></div>
+                <div class="mini-kpi"><strong>Relais</strong><span>animation terrain</span></div>
+                <div class="mini-kpi"><strong>SharePoint</strong><span>site projet centralisé</span></div>
+              </div>
+
+              <ul class="slide-list">
+                <li>Coordination de 32 000 équipements mobiles.</li>
+                <li>Création d’un site SharePoint centralisant ressources et supports.</li>
+                <li>Animation du réseau de relais locaux et accompagnement terrain.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </article>
-  </section>
-</main>
+
+      <div class="carousel-controls">
+        <div class="carousel-buttons">
+          <button class="carousel-btn" id="prevSlide" aria-label="Slide précédent">‹</button>
+          <button class="carousel-btn" id="nextSlide" aria-label="Slide suivant">›</button>
+        </div>
+
+        <div class="progress-line"><span id="progressBar"></span></div>
+
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" data-slide="0" aria-label="Aller à la réalisation 1"></button>
+          <button class="dot" data-slide="1" aria-label="Aller à la réalisation 2"></button>
+          <button class="dot" data-slide="2" aria-label="Aller à la réalisation 3"></button>
+          <button class="dot" data-slide="3" aria-label="Aller à la réalisation 4"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="realisations-overview">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Lecture recruteur</p>
+          <h2>Ce que ces réalisations démontrent.</h2>
+        </div>
+        <p>
+          Un positionnement hybride capable de relier les besoins métiers, les outils,
+          l’accompagnement humain et le pilotage opérationnel.
+        </p>
+      </div>
+
+      <div class="page-grid-4">
+        <article class="page-card"><span class="num">01</span><h3>Cadrage</h3><p>Transformer un besoin métier en dispositif projet clair, actionnable et pilotable.</p></article>
+        <article class="page-card"><span class="num">02</span><h3>Adoption</h3><p>Créer des supports, formations et relais pour faire utiliser réellement les outils.</p></article>
+        <article class="page-card"><span class="num">03</span><h3>Pilotage</h3><p>Suivre les indicateurs, coordonner les acteurs et sécuriser la trajectoire.</p></article>
+        <article class="page-card"><span class="num">04</span><h3>Impact</h3><p>Mesurer l’appropriation, améliorer les usages et ancrer les pratiques dans la durée.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const track = document.getElementById("carouselTrack");
+    const dots = [...document.querySelectorAll(".dot")];
+    const progressBar = document.getElementById("progressBar");
+    const prev = document.getElementById("prevSlide");
+    const next = document.getElementById("nextSlide");
+    const total = dots.length;
+    let index = 0;
+    let timer;
+
+    function goToSlide(nextIndex) {
+      index = (nextIndex + total) % total;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      progressBar.style.transform = `translateX(${index * 100}%)`;
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goToSlide(index + 1), 6500);
+    }
+
+    prev.addEventListener("click", () => goToSlide(index - 1));
+    next.addEventListener("click", () => goToSlide(index + 1));
+    dots.forEach((dot) => dot.addEventListener("click", () => goToSlide(Number(dot.dataset.slide))));
+
+    resetTimer();
+  </script>
 </body>
 </html>
