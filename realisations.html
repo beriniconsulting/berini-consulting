@@ -278,6 +278,20 @@
         grid-template-columns: 1fr;
       }
     }
+  .dual-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.partner-tag {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  font-weight: 700;
+}
   </style>
 </head>
 
@@ -346,8 +360,12 @@
 
           <article class="carousel-slide">
             <div class="slide-visual">
-              <div class="client-logo">
+              <div class="client-logo dual-logo">
   <img src="transilien.png" alt="Transilien">
+
+  <div class="partner-tag">
+    via TALAN
+  </div>
 </div>
             </div>
             <div class="slide-content">
