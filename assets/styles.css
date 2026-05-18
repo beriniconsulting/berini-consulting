@@ -1404,3 +1404,16 @@ h1,
 
   .tool-feature-card { flex-basis: 86vw !important; }
 }
+@media (min-width: 901px) {
+  .portrait-wrap img {
+    height: 78% !important;
+    right: 2% !important;
+    bottom: 0 !important;
+    transform: none !important;
+    object-fit: contain !important;
+  }
+
+  .portrait-wrap {
+    overflow: hidden !important;
+  }
+}
