@@ -490,6 +490,27 @@
   pointer-events: auto !important;
   z-index: 2 !important;
 }
+  .tools-deck {
+  min-height: 620px !important;
+}
+
+.tool-card {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.tool-card.active {
+  display: grid !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.tool-card.prev-card,
+.tool-card.next-card {
+  display: none !important;
+}
   </style>
 </head>
 
