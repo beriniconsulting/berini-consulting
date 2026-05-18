@@ -1055,3 +1055,128 @@ h1,
     bottom: 0 !important;
   }
 }
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: calc(100% - 24px);
+    padding: 10px 12px;
+    gap: 12px;
+  }
+
+  .brand span:last-child {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  section,
+  .hero,
+  .expertise-section,
+  .soft-skills-section,
+  .tools-deck-section,
+  .tool-showcase-section {
+    width: calc(100% - 28px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  h1,
+  h2 {
+    font-size: clamp(42px, 13vw, 58px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding-top: 90px !important;
+  }
+
+  .hero-left {
+    max-width: 100% !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-right,
+  .portrait-wrap {
+    min-height: 420px !important;
+  }
+
+  .portrait-wrap img {
+    height: 82% !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+
+  .portrait-card {
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 20px !important;
+    min-width: 0 !important;
+  }
+
+  .cards,
+  .stats-grid,
+  .page-grid,
+  .contact-grid,
+  .soft-skills-section,
+  .tools-deck-head,
+  .tool-showcase-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card,
+  .page-card,
+  .stat-card {
+    min-width: 0 !important;
+  }
+
+  .radar-panel {
+    width: 320px !important;
+    height: 320px !important;
+    margin: 40px auto 0 !important;
+  }
+
+  .tool-slider {
+    overflow-x: hidden !important;
+  }
+
+  .tool-feature-card {
+    flex-basis: 260px !important;
+    min-height: 420px !important;
+  }
+
+  .tool-feature-logo {
+    width: 86px !important;
+    height: 86px !important;
+  }
+
+  .tool-usage div {
+    flex-direction: column;
+  }
+}
