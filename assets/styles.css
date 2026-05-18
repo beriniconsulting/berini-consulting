@@ -1033,28 +1033,25 @@ h1,
 }
 @media (min-width: 1181px) {
   .hero {
-    grid-template-columns: 0.82fr 1.18fr !important;
-    gap: 72px !important;
+    grid-template-columns: 52% 48% !important;
+    gap: 0 !important;
   }
 
   .hero-left {
-    max-width: 650px !important;
-    overflow: visible !important;
+    position: relative !important;
+    z-index: 5 !important;
+    max-width: 620px !important;
   }
 
   .hero-right {
-    margin-left: 40px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: hidden !important;
   }
 
   .portrait-wrap img {
-    height: 72% !important;
-    right: -4% !important;
-    bottom: -10px !important;
-  }
-
-  .portrait-card {
-    left: 12% !important;
-    right: 4% !important;
-    bottom: 44px !important;
+    height: 82% !important;
+    right: -8% !important;
+    bottom: 0 !important;
   }
 }
