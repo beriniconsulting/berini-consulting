@@ -1566,3 +1566,10 @@ h1,
     letter-spacing: -0.045em !important;
   }
 }
+/* Réduit espace sous navbar */
+.hero,
+.home-hero,
+.hero-premium {
+  margin-top: 8px !important;
+  padding-top: 0 !important;
+}
