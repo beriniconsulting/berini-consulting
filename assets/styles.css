@@ -309,16 +309,16 @@ h1 {
 
 .portrait-wrap img {
   position: absolute;
+  right: -2%;
+  bottom: -8px;
 
-  bottom: 0;
-  right: 0;
-
-  height: 100%;
+  height: 78%;
   width: auto;
 
   object-fit: contain;
+  object-position: bottom right;
 
-  filter: drop-shadow(0 30px 80px rgba(0,0,0,.45));
+  filter: drop-shadow(0 35px 90px rgba(0,0,0,.35));
 }
 
 .portrait-glow {
