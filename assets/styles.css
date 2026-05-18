@@ -1031,3 +1031,30 @@ h1,
   max-width: 100%;
   object-fit: contain;
 }
+@media (min-width: 1181px) {
+  .hero {
+    grid-template-columns: 0.82fr 1.18fr !important;
+    gap: 72px !important;
+  }
+
+  .hero-left {
+    max-width: 650px !important;
+    overflow: visible !important;
+  }
+
+  .hero-right {
+    margin-left: 40px !important;
+  }
+
+  .portrait-wrap img {
+    height: 72% !important;
+    right: -4% !important;
+    bottom: -10px !important;
+  }
+
+  .portrait-card {
+    left: 12% !important;
+    right: 4% !important;
+    bottom: 44px !important;
+  }
+}
