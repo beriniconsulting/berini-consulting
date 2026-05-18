@@ -307,18 +307,16 @@ h1 {
   opacity: .7;
 }
 
-.portrait-wrap img {
-  position: absolute;
-  right: -2%;
-  bottom: -8px;
-
-  height: 78%;
-  width: auto;
-
-  object-fit: contain;
-  object-position: bottom right;
-
-  filter: drop-shadow(0 35px 90px rgba(0,0,0,.35));
+.portrait-wrap img,
+.hero-photo,
+.photo-zone img {
+    height: 100% !important;
+    width: auto !important;
+    right: 0 !important;
+    left: auto !important;
+    bottom: 0 !important;
+    transform: none !important;
+    object-fit: contain !important;
 }
 
 .portrait-glow {
