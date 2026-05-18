@@ -1686,3 +1686,34 @@ h1,
 
   z-index: 5 !important;
 }
+.contact-main {
+  position: relative;
+  overflow: visible !important;
+}
+
+.contact-portrait {
+  position: absolute !important;
+
+  top: 26px !important;
+
+  /* IMPORTANT */
+  right: -56px !important;
+
+  width: 108px !important;
+  height: 108px !important;
+
+  border-radius: 999px !important;
+
+  object-fit: cover !important;
+  object-position: center top !important;
+
+  border: 1px solid rgba(0,220,255,.35) !important;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 30px rgba(0,220,255,.10) !important;
+
+  background: #07111f !important;
+
+  z-index: 20 !important;
+}
