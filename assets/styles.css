@@ -1417,3 +1417,66 @@ h1,
     overflow: hidden !important;
   }
 }
+/* =========================
+   MOBILE FINAL FIXES
+========================= */
+
+@media (max-width: 900px) {
+
+  /* Sections internes */
+  .expertise-hero,
+  .approach-hero,
+  .insights-hero,
+  .inner-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  /* Grilles */
+  .featured-clean,
+  .principles,
+  .micro-grid,
+  .belief-list,
+  .editorial-grid,
+  .impact-grid,
+  .category-grid,
+  .page-grid-2,
+  .page-grid-3,
+  .page-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cartes outils */
+  .tool-track {
+    transform: none !important;
+    gap: 14px !important;
+  }
+
+  .tool-slider {
+    overflow-x: auto !important;
+    scrollbar-width: none;
+  }
+
+  .tool-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tool-feature-card {
+    flex: 0 0 84vw !important;
+    min-height: auto !important;
+  }
+
+  /* Radar */
+  .radar-panel {
+    transform: scale(.82) !important;
+    transform-origin: top center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Titres */
+  h1 {
+    font-size: clamp(42px, 11vw, 58px) !important;
+    line-height: .96 !important;
+  }
+}
