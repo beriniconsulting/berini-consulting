@@ -511,6 +511,7 @@
 .tool-card.next-card {
   display: none !important;
 }
+  .tool-showcase-section{margin-top:96px}.tool-showcase-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}.tool-showcase-intro h2{margin-top:18px;font-size:clamp(48px,5.4vw,82px);line-height:.94;letter-spacing:-.08em;max-width:600px}.tool-showcase-intro>p{margin-top:28px;max-width:520px;color:var(--soft);font-size:18px;line-height:1.75}.tool-showcase-controls{display:flex;gap:14px;margin-top:34px}.tool-nav-btn{width:54px;height:54px;border-radius:999px;border:1px solid rgba(180,210,235,.18);background:rgba(5,13,25,.72);color:#fff;font-size:32px;cursor:pointer}.tool-slider{overflow:hidden;padding:18px 0}.tool-track{display:flex;gap:18px;transition:transform .65s cubic-bezier(.19,1,.22,1)}.tool-feature-card{flex:0 0 310px;min-height:460px;border-radius:32px;border:1px solid rgba(180,210,235,.13);background:radial-gradient(circle at 50% 0%,rgba(37,225,238,.12),transparent 38%),linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));padding:28px;display:flex;flex-direction:column;justify-content:space-between;opacity:.52;transform:scale(.94);transition:.55s cubic-bezier(.19,1,.22,1);box-shadow:0 24px 90px rgba(0,0,0,.22)}.tool-feature-card.active{opacity:1;transform:scale(1);border-color:rgba(37,225,238,.50);box-shadow:0 30px 120px rgba(0,0,0,.35),0 0 70px rgba(37,225,238,.13)}.tool-feature-logo{width:116px;height:116px;border-radius:28px;background:#fff;display:grid;place-items:center;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.28)}.tool-feature-logo img{max-width:100%;max-height:100%;object-fit:contain}.tool-label{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-top:28px}.tool-feature-card h3{margin-top:12px;font-size:30px;line-height:1;letter-spacing:-.06em}.tool-desc{margin-top:18px;color:var(--soft);line-height:1.65;font-size:15px}.tool-mini-logos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.tool-mini-logos img{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:14px;padding:8px}.tool-usage-panel{margin-top:32px;border:1px solid rgba(180,210,235,.13);background:rgba(255,255,255,.035);border-radius:28px;padding:26px}.tool-usage{display:none}.tool-usage.active{display:block}.tool-usage strong{display:block;font-size:18px;margin-bottom:16px}.tool-usage div{display:flex;flex-wrap:wrap;gap:12px}.tool-usage span{border-radius:999px;border:1px solid rgba(37,225,238,.20);background:rgba(37,225,238,.07);color:#dffbff;padding:10px 14px;font-weight:700;font-size:14px}.tool-dots{display:flex;justify-content:center;gap:10px;margin-top:24px}.tool-dot{width:10px;height:10px;border:0;border-radius:999px;background:rgba(255,255,255,.22);cursor:pointer}.tool-dot.active{width:34px;background:var(--cyan);box-shadow:0 0 20px rgba(37,225,238,.55)}@media(max-width:980px){.tool-showcase-layout{grid-template-columns:1fr}.tool-feature-card{flex-basis:280px}}@media(max-width:680px){.tool-showcase-section{margin-top:64px}.tool-feature-card{flex-basis:260px;min-height:430px}.tool-feature-logo{width:96px;height:96px}}
   </style>
 </head>
 
@@ -643,115 +644,88 @@
       </div>
     </section>
 
-    <section class="tools-deck-section">
-  <div class="tools-deck-head">
-    <div>
+    <section class="tool-showcase-section">
+  <div class="tool-showcase-layout">
+    <div class="tool-showcase-intro">
       <p class="kicker">Stack & usages</p>
-      <h2>Des outils maîtrisés, appliqués à des usages concrets.</h2>
-    </div>
-    <p>Un écosystème d’outils utilisé pour piloter, documenter, former, structurer les espaces collaboratifs et accélérer l’adoption.</p>
-  </div>
-
-  <div class="deck-wrapper">
-    <button class="deck-arrow deck-prev" type="button">‹</button>
-
-    <div class="tools-deck" id="toolsDeck">
-      <article class="tool-card active" data-card="0">
-        <div class="tool-card-top">
-          <span>01</span>
-          <h3>Collaboration & digital workplace</h3>
-          <p>Créer des environnements collaboratifs clairs, structurés et adoptés par les utilisateurs.</p>
-        </div>
-        <div class="tool-logo-row">
-          <div class="tool-logo"><img src="assets/logos/teams.png" alt="Teams"></div>
-          <div class="tool-logo"><img src="assets/logos/sharepoint.png" alt="SharePoint"></div>
-          <div class="tool-logo"><img src="assets/logos/onedrive.svg" alt="OneDrive"></div>
-          <div class="tool-logo wide"><img src="assets/logos/copilot.png" alt="Copilot"></div>
-        </div>
-        <div class="tool-card-detail">
-          <strong>Utilisé chez : URSSAF, SNCF, Association Aurore</strong>
-          <ul>
-            <li>Création de portails internes et espaces projet.</li>
-            <li>Centralisation documentaire et supports utilisateurs.</li>
-            <li>Animation de communautés et relais terrain.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="tool-card" data-card="1">
-        <div class="tool-card-top">
-          <span>02</span>
-          <h3>Pilotage & coordination</h3>
-          <p>Piloter les projets, suivre les actions et coordonner les acteurs autour d’objectifs communs.</p>
-        </div>
-        <div class="tool-logo-row">
-          <div class="tool-logo"><img src="assets/logos/jira.png" alt="Jira"></div>
-          <div class="tool-logo"><img src="assets/logos/asana.png" alt="Asana"></div>
-          <div class="tool-logo"><img src="assets/logos/trello.png" alt="Trello"></div>
-          <div class="tool-logo"><img src="assets/logos/excel.png" alt="Excel"></div>
-          <div class="tool-logo"><img src="assets/logos/powerbi.png" alt="Power BI"></div>
-        </div>
-        <div class="tool-card-detail">
-          <strong>Utilisé chez : SNCF, Talan, URSSAF</strong>
-          <ul>
-            <li>Suivi d’actions, reporting et tableaux de bord.</li>
-            <li>Coordination transverse métiers, IT et relais terrain.</li>
-            <li>Suivi budgétaire, indicateurs et pilotage opérationnel.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="tool-card" data-card="2">
-        <div class="tool-card-top">
-          <span>03</span>
-          <h3>IA & productivité</h3>
-          <p>Accélérer la production, structurer l’information et rendre l’IA concrète pour les métiers.</p>
-        </div>
-        <div class="tool-logo-row">
-          <div class="tool-logo"><img src="assets/logos/chatgpt.png" alt="ChatGPT"></div>
-          <div class="tool-logo"><img src="assets/logos/gemini.png" alt="Gemini"></div>
-          <div class="tool-logo"><img src="assets/logos/copilot.png" alt="Copilot"></div>
-          <div class="tool-logo wide"><img src="assets/logos/notebooklm.png" alt="NotebookLM"></div>
-        </div>
-        <div class="tool-card-detail">
-          <strong>Utilisé chez : URSSAF et projets d’acculturation IA</strong>
-          <ul>
-            <li>Acculturation IA générative et ateliers pratiques.</li>
-            <li>Création et présentation d’agents IA métier.</li>
-            <li>Structuration de ressources, dictionnaire IA et cas d’usage.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="tool-card" data-card="3">
-        <div class="tool-card-top">
-          <span>04</span>
-          <h3>Création & communication</h3>
-          <p>Créer des supports clairs, visuels et adaptés aux utilisateurs pour faciliter l’adoption.</p>
-        </div>
-        <div class="tool-logo-row">
-          <div class="tool-logo"><img src="assets/logos/canva.png" alt="Canva"></div>
-          <div class="tool-logo"><img src="assets/logos/gamma.png" alt="Gamma"></div>
-        </div>
-        <div class="tool-card-detail">
-          <strong>Utilisé pour : formation, conduite du changement et communication projet</strong>
-          <ul>
-            <li>Création de supports pédagogiques et visuels.</li>
-            <li>Conception de contenus d’acculturation et tutoriels.</li>
-            <li>Supports de webinaires, ateliers et animation de communautés.</li>
-          </ul>
-        </div>
-      </article>
+      <h2>Des outils activés au service des usages.</h2>
+      <p>Une sélection d’environnements utilisés pour piloter, documenter, créer, former et accélérer l’adoption des transformations.</p>
+      <div class="tool-showcase-controls">
+        <button class="tool-nav-btn" id="toolPrev" type="button">‹</button>
+        <button class="tool-nav-btn" id="toolNext" type="button">›</button>
+      </div>
     </div>
 
-    <button class="deck-arrow deck-next" type="button">›</button>
+    <div class="tool-slider">
+      <div class="tool-track" id="toolTrack">
+
+        <article class="tool-feature-card active" data-category="0">
+          <div class="tool-feature-logo"><img src="assets/logos/teams.png" alt="Teams"></div>
+          <p class="tool-label">Collaboration</p>
+          <h3>Digital workplace</h3>
+          <p class="tool-desc">Espaces collaboratifs, documentation projet, animation de communautés et supports utilisateurs.</p>
+          <div class="tool-mini-logos">
+            <img src="assets/logos/teams.png" alt="Teams">
+            <img src="assets/logos/sharepoint.png" alt="SharePoint">
+            <img src="assets/logos/onedrive.svg" alt="OneDrive">
+            <img src="assets/logos/copilot.png" alt="Copilot">
+          </div>
+        </article>
+
+        <article class="tool-feature-card" data-category="1">
+          <div class="tool-feature-logo"><img src="assets/logos/jira.png" alt="Jira"></div>
+          <p class="tool-label">Pilotage</p>
+          <h3>Coordination projet</h3>
+          <p class="tool-desc">Suivi des actions, reporting, coordination transverse et pilotage des indicateurs.</p>
+          <div class="tool-mini-logos">
+            <img src="assets/logos/jira.png" alt="Jira">
+            <img src="assets/logos/asana.png" alt="Asana">
+            <img src="assets/logos/trello.png" alt="Trello">
+            <img src="assets/logos/excel.png" alt="Excel">
+            <img src="assets/logos/powerbi.png" alt="Power BI">
+          </div>
+        </article>
+
+        <article class="tool-feature-card" data-category="2">
+          <div class="tool-feature-logo"><img src="assets/logos/chatgpt.png" alt="ChatGPT"></div>
+          <p class="tool-label">IA & productivité</p>
+          <h3>IA appliquée métier</h3>
+          <p class="tool-desc">Acculturation IA, cas d’usage, agents métier, synthèse et structuration de connaissances.</p>
+          <div class="tool-mini-logos">
+            <img src="assets/logos/chatgpt.png" alt="ChatGPT">
+            <img src="assets/logos/gemini.png" alt="Gemini">
+            <img src="assets/logos/copilot.png" alt="Copilot">
+            <img src="assets/logos/notebooklm.png" alt="NotebookLM">
+          </div>
+        </article>
+
+        <article class="tool-feature-card" data-category="3">
+          <div class="tool-feature-logo"><img src="assets/logos/canva.png" alt="Canva"></div>
+          <p class="tool-label">Communication</p>
+          <h3>Supports & contenus</h3>
+          <p class="tool-desc">Supports pédagogiques, présentations, contenus de formation et communication projet.</p>
+          <div class="tool-mini-logos">
+            <img src="assets/logos/canva.png" alt="Canva">
+            <img src="assets/logos/gamma.png" alt="Gamma">
+          </div>
+        </article>
+
+      </div>
+    </div>
   </div>
 
-  <div class="deck-indicators">
-    <button class="deck-dot active" data-target="0"></button>
-    <button class="deck-dot" data-target="1"></button>
-    <button class="deck-dot" data-target="2"></button>
-    <button class="deck-dot" data-target="3"></button>
+  <div class="tool-usage-panel">
+    <div class="tool-usage active" data-usage="0"><strong>Utilisé chez : Aurore, URSSAF, SNCF</strong><div><span>Portails internes</span><span>Centralisation documentaire</span><span>Communautés utilisateurs</span></div></div>
+    <div class="tool-usage" data-usage="1"><strong>Utilisé chez : SNCF, Talan, URSSAF</strong><div><span>Suivi d’actions</span><span>Reporting projet</span><span>Coordination terrain</span></div></div>
+    <div class="tool-usage" data-usage="2"><strong>Utilisé chez : URSSAF et projets IA</strong><div><span>Acculturation IA</span><span>Agents IA métier</span><span>Cas d’usage</span></div></div>
+    <div class="tool-usage" data-usage="3"><strong>Utilisé pour : formation & change</strong><div><span>Supports pédagogiques</span><span>Webinaires</span><span>Communication projet</span></div></div>
+  </div>
+
+  <div class="tool-dots">
+    <button class="tool-dot active" data-dot="0"></button>
+    <button class="tool-dot" data-dot="1"></button>
+    <button class="tool-dot" data-dot="2"></button>
+    <button class="tool-dot" data-dot="3"></button>
   </div>
 </section>
 
@@ -821,6 +795,29 @@ deckNext?.addEventListener("click",()=>updateDeck(deckIndex+1));
 deckDots.forEach(dot=>dot.addEventListener("click",()=>updateDeck(Number(dot.dataset.target))));
 deckCards.forEach(card=>card.addEventListener("click",()=>{const target=Number(card.dataset.card);if(target!==deckIndex)updateDeck(target)}));
 updateDeck(0);
+</script>
+<script>
+const toolTrack=document.getElementById("toolTrack");
+const toolCards=Array.from(document.querySelectorAll(".tool-feature-card"));
+const toolDots=Array.from(document.querySelectorAll(".tool-dot"));
+const toolUsages=Array.from(document.querySelectorAll(".tool-usage"));
+const toolPrev=document.getElementById("toolPrev");
+const toolNext=document.getElementById("toolNext");
+let toolIndex=0;
+function updateToolShowcase(index){
+  toolIndex=(index+toolCards.length)%toolCards.length;
+  toolCards.forEach((card,i)=>card.classList.toggle("active",i===toolIndex));
+  toolDots.forEach((dot,i)=>dot.classList.toggle("active",i===toolIndex));
+  toolUsages.forEach((usage,i)=>usage.classList.toggle("active",i===toolIndex));
+  const cardWidth=toolCards[0].offsetWidth+18;
+  toolTrack.style.transform=`translateX(${-toolIndex*cardWidth}px)`;
+}
+toolPrev.addEventListener("click",()=>updateToolShowcase(toolIndex-1));
+toolNext.addEventListener("click",()=>updateToolShowcase(toolIndex+1));
+toolDots.forEach(dot=>dot.addEventListener("click",()=>updateToolShowcase(Number(dot.dataset.dot))));
+toolCards.forEach(card=>card.addEventListener("click",()=>updateToolShowcase(Number(card.dataset.category))));
+window.addEventListener("resize",()=>updateToolShowcase(toolIndex));
+updateToolShowcase(0);
 </script>
 </body>
 </html>
