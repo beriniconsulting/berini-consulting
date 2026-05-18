@@ -1480,3 +1480,89 @@ h1,
     line-height: .96 !important;
   }
 }
+/* FIX MOBILE EXPERTISES + APPROCHE */
+@media (max-width: 900px) {
+
+  /* EXPERTISES : on supprime le slider mobile, tout devient lisible */
+  .tool-showcase-layout {
+    display: block !important;
+  }
+
+  .tool-slider {
+    overflow: visible !important;
+  }
+
+  .tool-track {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    transform: none !important;
+  }
+
+  .tool-feature-card {
+    width: 100% !important;
+    flex: none !important;
+    min-height: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 22px !important;
+  }
+
+  .tool-showcase-controls,
+  .tool-dots {
+    display: none !important;
+  }
+
+  .tool-usage-panel {
+    display: none !important;
+  }
+
+  /* APPROCHE : on empêche les textes de se superposer */
+  .approach-premium,
+  .approach-hero,
+  .approach-copy,
+  .principles,
+  .micro-grid,
+  .belief-list,
+  .approach-section,
+  .approach-card {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .approach-hero,
+  .principles,
+  .micro-grid,
+  .belief-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .approach-card,
+  .principle-card,
+  .micro-card,
+  .belief-card,
+  .page-card {
+    position: relative !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 22px !important;
+  }
+
+  .approach-copy h1,
+  .approach-copy h2,
+  .approach-premium h1,
+  .approach-premium h2 {
+    font-size: clamp(38px, 11vw, 52px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.045em !important;
+  }
+}
