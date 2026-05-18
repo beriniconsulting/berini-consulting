@@ -3,324 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Yacine Berini — Consultant Transformation Digitale, AMOA & Adoption IA</title>
-  <meta name="description" content="Consultant transformation digitale, AMOA, change management, adoption des outils numériques et IA générative." />
-
+  <meta name="description" content="Consultant transformation digitale, AMOA, conduite du changement, adoption des outils numériques et IA générative." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
-
-  <style>
-    .home-page {
-      width: min(1470px, calc(100% - 56px));
-      margin: 72px auto 0;
-    }
-
-    .home-hero {
-      position: relative;
-      min-height: 680px;
-      display: grid;
-      grid-template-columns: 0.98fr 1.02fr;
-      align-items: center;
-      gap: 34px;
-      overflow: hidden;
-    }
-
-    .home-hero::before {
-      content: "";
-      position: absolute;
-      inset: -80px;
-      background:
-        radial-gradient(circle at 76% 42%, rgba(37,225,238,.22), transparent 31%),
-        radial-gradient(circle at 62% 68%, rgba(191,255,103,.08), transparent 30%);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .hero-left {
-      position: relative;
-      z-index: 4;
-      min-width: 0;
-    }
-
-    .hero-badge {
-      width: fit-content;
-      max-width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 17px;
-      border-radius: 999px;
-      border: 1px solid rgba(37,225,238,.30);
-      background: rgba(37,225,238,.06);
-      color: #dbe8f3;
-      font-size: 15px;
-      line-height: 1.35;
-      font-weight: 750;
-    }
-
-    .hero-badge span {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: var(--lime);
-      box-shadow: 0 0 18px rgba(191,255,103,.8);
-      flex: 0 0 auto;
-    }
-
-    .hero-left h1 {
-      margin-top: 34px;
-      max-width: 780px;
-      font-size: clamp(58px, 5.6vw, 92px);
-      line-height: 1.03;
-      letter-spacing: -0.06em;
-      font-weight: 900;
-      color: var(--white);
-    }
-
-    .hero-left h1 .grad {
-      display: inline-block;
-      padding-right: .06em;
-      background: linear-gradient(110deg, var(--cyan) 0%, #6ff0d6 30%, var(--lime) 66%, #f5fbff 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-left p {
-      margin-top: 28px;
-      max-width: 620px;
-      color: var(--soft);
-      font-size: 17px;
-      line-height: 1.72;
-    }
-
-    .hero-actions {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .hero-photo-area {
-      position: relative;
-      z-index: 2;
-      min-height: 660px;
-      overflow: visible;
-    }
-
-    
-
-    .hero-photo-area {
-  position: relative;
-  z-index: 2;
-  min-height: 660px;
-  overflow: visible;
-  background: transparent;
-}
-
-    .hero-photo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  height: 92%;
-  width: auto;
-
-  object-fit: contain;
-  object-position: bottom right;
-
-  z-index: 2;
-
-  filter: drop-shadow(0 35px 90px rgba(0,0,0,.35));
-}
-
-    .identity-card {
-      position: absolute;
-      left: 8%;
-      right: 4%;
-      bottom: 56px;
-      z-index: 5;
-      padding: 24px 28px;
-      border-radius: 26px;
-      border: 1px solid rgba(180,210,235,.20);
-      border-left: 2px solid var(--cyan);
-      background: linear-gradient(90deg, rgba(5,13,25,.80), rgba(5,13,25,.42));
-      backdrop-filter: blur(22px);
-      box-shadow: 0 28px 80px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.045);
-    }
-
-    .identity-card strong {
-      display: block;
-      font-size: 25px;
-      letter-spacing: -.055em;
-    }
-
-    .identity-card span {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 10px;
-      color: #d6e1ec;
-      font-size: 15px;
-    }
-
-    .identity-card i {
-      width: 5px;
-      height: 5px;
-      border-radius: 999px;
-      background: var(--cyan);
-      flex: 0 0 auto;
-    }
-
-    .stats-section {
-      margin-top: 22px;
-      border-top: 1px solid rgba(180,210,235,.12);
-      padding: 30px 0 48px;
-    }
-
-    .section-separator {
-      width: min(1470px, calc(100% - 56px));
-      margin: 0 auto 22px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      color: var(--cyan);
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    .section-separator span {
-      width: 62px;
-      height: 1px;
-      background: rgba(37,225,238,.32);
-    }
-
-    .stats-grid {
-      width: min(1470px, calc(100% - 56px));
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .stat-card {
-      min-height: 180px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(37,225,238,.09), transparent 42%),
-        rgba(6, 18, 31, .58);
-      padding: 30px 26px;
-      display: grid;
-      grid-template-columns: 56px minmax(0, 1fr);
-      align-items: center;
-      gap: 22px;
-      overflow: visible;
-    }
-
-    .stat-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      border: 1px solid rgba(180,210,235,.17);
-      background: rgba(255,255,255,.025);
-      display: grid;
-      place-items: center;
-      color: var(--cyan);
-      font-size: 24px;
-    }
-
-    .stat-content strong {
-      display: block;
-      font-size: clamp(38px, 3.45vw, 54px);
-      line-height: 1.04;
-      letter-spacing: -.045em;
-      font-weight: 900;
-      background: linear-gradient(110deg, var(--cyan), var(--lime));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      white-space: nowrap;
-    }
-
-    .stat-content span {
-      display: block;
-      margin-top: 12px;
-      color: #cbd6e5;
-      font-size: 16px;
-      line-height: 1.42;
-    }
-
-    @media (max-width: 1180px) {
-      .home-hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo-area {
-        order: -1;
-        min-height: 520px;
-      }
-
-      .hero-photo {
-        right: 50%;
-        transform: translateX(50%);
-        height: 92%;
-      }
-
-      .identity-card {
-        left: 50%;
-        right: auto;
-        width: min(560px, calc(100% - 32px));
-        transform: translateX(-50%);
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 680px) {
-      .home-page,
-      .stats-grid,
-      .section-separator {
-        width: calc(100% - 28px);
-      }
-
-      .home-page {
-        margin-top: 42px;
-      }
-
-      .hero-left h1 {
-        font-size: clamp(46px, 13vw, 62px);
-        line-height: 1.04;
-        letter-spacing: -.045em;
-      }
-
-      .hero-photo-area {
-        min-height: 430px;
-      }
-
-      .hero-photo {
-        height: 96%;
-      }
-
-      .identity-card {
-        bottom: 20px;
-        padding: 18px 20px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <div class="page-bg"></div>
+
   <header class="site-header">
     <nav class="navbar">
       <a href="index.html" class="brand">
@@ -342,36 +35,36 @@
   </header>
 
   <main>
-    <section class="home-page">
-      <div class="home-hero">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span></span>
-            Berini Consulting — Consultant transformation digitale, AMOA & adoption
-          </div>
-
-          <h1>
-            <span class="grad">Transformer</span> les<br>
-            <span class="grad">outils</span> en usages<br>
-            durables.
-          </h1>
-
-          <p>
-            J’accompagne les organisations dans leurs projets de transformation digitale :
-            alignement des besoins, déploiement d’outils, adoption par les utilisateurs
-            et mesure de l’impact.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="approche.html">Découvrir mon approche <span>→</span></a>
-            <a class="btn secondary" href="realisations.html">Voir mes réalisations <span>→</span></a>
-          </div>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">
+          <span></span>
+          Berini Consulting — Consultant transformation digitale, AMOA & adoption
         </div>
 
-        <div class="hero-photo-area">
-          <img class="hero-photo" src="assets/yacine-berini.jpg" alt="Portrait professionnel de Yacine Berini" />
+        <h1>
+          <span class="grad">Transformer</span> les<br>
+          <span class="grad">outils</span> en usages<br>
+          durables.
+        </h1>
 
-          <div class="identity-card">
+        <p class="hero-text">
+          J’accompagne les organisations dans leurs projets de transformation digitale :
+          alignement des besoins, déploiement d’outils, adoption par les utilisateurs
+          et mesure de l’impact.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="approche.html">Découvrir mon approche <span>→</span></a>
+          <a class="btn secondary" href="realisations.html">Voir mes réalisations <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait-wrap">
+          <div class="portrait-glow"></div>
+          <img src="assets/yacine-berini.jpg" alt="Portrait professionnel de Yacine Berini" />
+          <div class="portrait-card">
             <strong>Yacine Berini</strong>
             <span>Transformation digitale <i></i> AMOA <i></i> Adoption IA</span>
           </div>
@@ -417,6 +110,37 @@
             <strong class="counter" data-target="30" data-suffix="M€">0</strong>
             <span>budget SI suivi<br>et optimisé</span>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="below-section">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Expertises clés</p>
+          <h2>Un profil hybride : outils, métiers et adoption.</h2>
+        </div>
+        <p>
+          Je ne fais pas que de l’IA. Mon offre couvre la transformation digitale, l’AMOA,
+          la conduite du changement, la formation, les outils collaboratifs et l’adoption des usages.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span>01</span>
+          <h3>Transformation digitale</h3>
+          <p>Déploiement d’outils, digital workplace, modernisation des processus et optimisation des usages.</p>
+        </article>
+        <article class="card">
+          <span>02</span>
+          <h3>AMOA & coordination</h3>
+          <p>Recueil des besoins, cadrage fonctionnel, ateliers métiers, gouvernance et reporting.</p>
+        </article>
+        <article class="card">
+          <span>03</span>
+          <h3>Change & adoption</h3>
+          <p>Formations, communautés, supports utilisateurs, relais terrain et communication projet.</p>
         </article>
       </div>
     </section>
