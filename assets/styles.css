@@ -1650,3 +1650,10 @@ h1,
 
   z-index: 3 !important;
 }
+.contact-portrait {
+  top: 18px !important;
+  right: 18px !important;
+
+  width: 110px !important;
+  height: 110px !important;
+}
