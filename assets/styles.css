@@ -1060,123 +1060,130 @@ h1,
     overflow-x: hidden;
   }
 
+  .site-header {
+    position: sticky;
+    top: 8px;
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+    z-index: 999;
+  }
+
   .navbar {
-    width: calc(100% - 24px);
-    padding: 10px 12px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
     gap: 12px;
+    border-radius: 22px;
+    padding: 10px 12px;
   }
 
   .brand span:last-child {
-    display: none;
+    font-size: 14px;
   }
 
   .nav-links {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 14px;
+    max-width: 55vw;
+    white-space: nowrap;
+    font-size: 13px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
   }
 
   .nav-cta {
-    padding: 10px 14px;
-    font-size: 14px;
+    display: none !important;
   }
 
-  section,
   .hero,
-  .expertise-section,
-  .soft-skills-section,
-  .tools-deck-section,
-  .tool-showcase-section {
+  .inner-page,
+  .expertise-premium,
+  .approach-premium,
+  .insights-clean-premium,
+  .insights-page,
+  .contact-panel {
     width: calc(100% - 28px) !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  h1,
-  h2 {
-    font-size: clamp(42px, 13vw, 58px) !important;
-    line-height: 1.02 !important;
-    letter-spacing: -0.05em !important;
+  .hero,
+  .home-hero,
+  .expertise-hero,
+  .approach-hero,
+  .insights-hero,
+  .featured-clean,
+  .principles,
+  .micro-grid,
+  .soft-skills-section,
+  .tool-showcase-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  h1, h2 {
+    font-size: clamp(40px, 12vw, 56px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.045em !important;
   }
 
   p {
-    font-size: 16px !important;
+    font-size: 15px !important;
     line-height: 1.6 !important;
   }
 
-  .hero {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-    padding-top: 90px !important;
+  .portrait-wrap,
+  .hero-photo-area,
+  .photo-zone {
+    min-height: 390px !important;
+    overflow: hidden !important;
   }
 
-  .hero-left {
-    max-width: 100% !important;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-right,
-  .portrait-wrap {
-    min-height: 420px !important;
-  }
-
-  .portrait-wrap img {
-    height: 82% !important;
+  .portrait-wrap img,
+  .hero-photo,
+  .photo-zone img {
+    height: 88% !important;
     right: 50% !important;
     transform: translateX(50%) !important;
+    bottom: 0 !important;
   }
 
-  .portrait-card {
-    left: 16px !important;
-    right: 16px !important;
-    bottom: 20px !important;
+  .portrait-card,
+  .identity-card {
+    left: 14px !important;
+    right: 14px !important;
+    bottom: 16px !important;
+    width: auto !important;
     min-width: 0 !important;
+    transform: none !important;
   }
 
-  .cards,
   .stats-grid,
-  .page-grid,
-  .contact-grid,
-  .soft-skills-section,
-  .tools-deck-head,
-  .tool-showcase-layout {
+  .cards,
+  .page-grid-2,
+  .page-grid-3,
+  .page-grid-4,
+  .category-grid,
+  .editorial-grid,
+  .belief-list {
     grid-template-columns: 1fr !important;
-  }
-
-  .card,
-  .page-card,
-  .stat-card {
-    min-width: 0 !important;
-  }
-
-  .radar-panel {
-    width: 320px !important;
-    height: 320px !important;
-    margin: 40px auto 0 !important;
   }
 
   .tool-slider {
-    overflow-x: hidden !important;
+    overflow-x: auto !important;
+  }
+
+  .tool-track {
+    transform: none !important;
   }
 
   .tool-feature-card {
-    flex-basis: 260px !important;
-    min-height: 420px !important;
-  }
-
-  .tool-feature-logo {
-    width: 86px !important;
-    height: 86px !important;
-  }
-
-  .tool-usage div {
-    flex-direction: column;
+    flex: 0 0 82vw !important;
+    min-height: auto !important;
   }
 }
