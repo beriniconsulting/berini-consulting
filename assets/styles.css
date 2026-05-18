@@ -1577,22 +1577,22 @@ h1,
   position: relative;
 }
 
+.contact-main {
+  position: relative;
+}
+
 .contact-portrait {
   position: absolute;
-  top: 28px;
-  right: 28px;
+  top: 24px;
+  right: 24px;
 
   width: 92px;
   height: 92px;
 
   object-fit: cover;
+  object-position: center top;
+
   border-radius: 999px;
 
-  border: 1px solid rgba(255,255,255,.12);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.35),
-    0 0 40px rgba(0,220,255,.12);
-
-  opacity: .95;
+  overflow: hidden;
 }
