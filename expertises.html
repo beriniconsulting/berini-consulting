@@ -278,17 +278,22 @@
     }
 
     .radar-panel {
-      position: relative;
-      min-height: 460px;
-      border-radius: 34px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(circle at 50% 50%, rgba(37,225,238,.16), transparent 35%),
-        rgba(255,255,255,.035);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(circle, rgba(61,239,255,.08) 0%, transparent 72%);
+
+  border: 1px solid rgba(61,239,255,.08);
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
 
     .radar-panel::before {
       content: "";
@@ -309,33 +314,50 @@
     }
 
     .radar-core {
-      position: relative;
-      z-index: 2;
-      width: 150px;
-      height: 150px;
-      border-radius: 40px;
-      background: linear-gradient(135deg, var(--cyan), var(--lime));
-      color: #06111c;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      font-weight: 900;
-      letter-spacing: -.04em;
-      box-shadow: 0 28px 90px rgba(37,225,238,.20);
-    }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #31d7ff,
+    #b0ff66
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-weight: 800;
+  color: #04111d;
+
+  box-shadow:
+    0 0 35px rgba(49,215,255,.22);
+}
 
     .radar-label {
-      position: absolute;
-      z-index: 3;
-      border: 1px solid rgba(180,210,235,.16);
-      background: rgba(5,13,25,.72);
-      backdrop-filter: blur(18px);
-      border-radius: 999px;
-      padding: 10px 13px;
-      font-size: 13px;
-      font-weight: 800;
-      color: #d8e3ef;
-    }
+  position: absolute;
+
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(7,18,32,.88);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  backdrop-filter: blur(10px);
+}
 
     .l1 { top: 42px; left: 50%; transform: translateX(-50%); }
     .l2 { right: 42px; top: 42%; }
