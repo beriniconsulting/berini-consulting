@@ -1618,3 +1618,35 @@ h1,
 
   transform: translateX(20px) !important;
 }
+.contact-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-portrait {
+  position: absolute !important;
+
+  top: 38px !important;
+  right: 42px !important;
+
+  width: 128px !important;
+  height: 128px !important;
+
+  border-radius: 999px !important;
+
+  object-fit: cover !important;
+  object-position: center top !important;
+
+  border: 1px solid rgba(0,220,255,.45) !important;
+
+  box-shadow:
+    0 0 0 4px rgba(0,220,255,.06),
+    0 12px 40px rgba(0,0,0,.35),
+    0 0 40px rgba(0,220,255,.14) !important;
+
+  background: #07111f !important;
+
+  overflow: hidden !important;
+
+  z-index: 3 !important;
+}
