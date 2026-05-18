@@ -13,40 +13,39 @@
   <link rel="stylesheet" href="assets/styles.css" />
 
   <style>
-    .home-premium {
+    .home-page {
       width: min(1470px, calc(100% - 56px));
-      margin: 76px auto 0;
+      margin: 72px auto 0;
     }
 
-    .hero-premium {
+    .home-hero {
       position: relative;
       min-height: 680px;
       display: grid;
-      grid-template-columns: minmax(0, .98fr) minmax(460px, 1.02fr);
-      gap: 44px;
+      grid-template-columns: 0.98fr 1.02fr;
       align-items: center;
+      gap: 34px;
       overflow: hidden;
     }
 
-    .hero-premium::before {
+    .home-hero::before {
       content: "";
       position: absolute;
-      inset: -120px -80px -80px -80px;
+      inset: -80px;
       background:
-        radial-gradient(circle at 72% 36%, rgba(37,225,238,.16), transparent 28%),
-        radial-gradient(circle at 34% 72%, rgba(191,255,103,.07), transparent 26%);
-      pointer-events: none;
+        radial-gradient(circle at 76% 42%, rgba(37,225,238,.22), transparent 31%),
+        radial-gradient(circle at 62% 68%, rgba(191,255,103,.08), transparent 30%);
       z-index: 0;
+      pointer-events: none;
     }
 
-    .hero-copy {
+    .hero-left {
       position: relative;
-      z-index: 3;
+      z-index: 4;
       min-width: 0;
-      padding-top: 28px;
     }
 
-    .hero-eyebrow {
+    .hero-badge {
       width: fit-content;
       max-width: 100%;
       display: flex;
@@ -60,10 +59,9 @@
       font-size: 15px;
       line-height: 1.35;
       font-weight: 750;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
     }
 
-    .hero-eyebrow span {
+    .hero-badge span {
       width: 9px;
       height: 9px;
       border-radius: 999px;
@@ -72,28 +70,27 @@
       flex: 0 0 auto;
     }
 
-    .hero-copy h1 {
+    .hero-left h1 {
       margin-top: 34px;
-      max-width: 760px;
-      font-size: clamp(58px, 5.95vw, 98px);
-      line-height: 1.02;
-      letter-spacing: -0.066em;
+      max-width: 780px;
+      font-size: clamp(58px, 5.6vw, 92px);
+      line-height: 1.03;
+      letter-spacing: -0.06em;
       font-weight: 900;
       color: var(--white);
     }
 
-    .hero-copy h1 .grad {
+    .hero-left h1 .grad {
       display: inline-block;
       padding-right: .06em;
-      background: linear-gradient(110deg, var(--cyan) 0%, #6ff0d6 32%, var(--lime) 65%, #f5fbff 100%);
-      background-size: 220% auto;
+      background: linear-gradient(110deg, var(--cyan) 0%, #6ff0d6 30%, var(--lime) 66%, #f5fbff 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .hero-copy p {
-      margin-top: 26px;
+    .hero-left p {
+      margin-top: 28px;
       max-width: 620px;
       color: var(--soft);
       font-size: 17px;
@@ -107,76 +104,52 @@
       gap: 16px;
     }
 
-    .photo-zone {
+    .hero-photo-area {
       position: relative;
       z-index: 2;
-      min-height: 640px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      min-height: 660px;
       overflow: visible;
     }
 
-    .photo-zone::before {
-      content: "";
-      position: absolute;
-      right: 5%;
-      bottom: 0;
-      width: 82%;
-      height: 86%;
-      background:
-        radial-gradient(circle at 48% 35%, rgba(37,225,238,.18), transparent 34%),
-        linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,0));
-      z-index: 0;
-    }
+    
 
-    .photo-zone::after {
-      content: "";
-      position: absolute;
-      left: 6%;
-      right: -6%;
-      bottom: 0;
-      height: 48%;
-      background: linear-gradient(180deg, transparent 0%, rgba(2,9,19,.78) 72%, rgba(2,9,19,.98) 100%);
-      z-index: 3;
-      pointer-events: none;
-    }
+    .hero-photo-area {
+  position: relative;
+  z-index: 2;
+  min-height: 660px;
+  overflow: visible;
+  background: transparent;
+}
 
-    .photo-zone img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 92%;
-      width: auto;
-      object-fit: contain;
-      object-position: bottom right;
-      z-index: 2;
-      filter:
-        drop-shadow(0 42px 110px rgba(0,0,0,.54))
-        saturate(1.02)
-        contrast(1.02);
-      mask-image: linear-gradient(
-        to bottom,
-        rgba(0,0,0,.96) 0%,
-        rgba(0,0,0,1) 72%,
-        rgba(0,0,0,.72) 90%,
-        rgba(0,0,0,0) 100%
-      );
-    }
+    .hero-photo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  height: 92%;
+  width: auto;
+
+  object-fit: contain;
+  object-position: bottom right;
+
+  z-index: 2;
+
+  filter: drop-shadow(0 35px 90px rgba(0,0,0,.35));
+}
 
     .identity-card {
       position: absolute;
-      left: 10%;
-      right: 6%;
-      bottom: 68px;
+      left: 8%;
+      right: 4%;
+      bottom: 56px;
       z-index: 5;
-      padding: 22px 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(180,210,235,.18);
+      padding: 24px 28px;
+      border-radius: 26px;
+      border: 1px solid rgba(180,210,235,.20);
       border-left: 2px solid var(--cyan);
-      background: linear-gradient(90deg, rgba(5,13,25,.78), rgba(5,13,25,.46));
+      background: linear-gradient(90deg, rgba(5,13,25,.80), rgba(5,13,25,.42));
       backdrop-filter: blur(22px);
-      box-shadow: 0 26px 80px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.045);
+      box-shadow: 0 28px 80px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.045);
     }
 
     .identity-card strong {
@@ -203,9 +176,27 @@
     }
 
     .stats-section {
-      margin-top: 36px;
+      margin-top: 22px;
       border-top: 1px solid rgba(180,210,235,.12);
       padding: 30px 0 48px;
+    }
+
+    .section-separator {
+      width: min(1470px, calc(100% - 56px));
+      margin: 0 auto 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      color: var(--cyan);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .section-separator span {
+      width: 62px;
+      height: 1px;
+      background: rgba(37,225,238,.32);
     }
 
     .stats-grid {
@@ -264,36 +255,17 @@
       line-height: 1.42;
     }
 
-    .section-separator {
-      width: min(1470px, calc(100% - 56px));
-      margin: 0 auto 22px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      color: var(--cyan);
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    .section-separator span {
-      width: 62px;
-      height: 1px;
-      background: rgba(37,225,238,.32);
-    }
-
     @media (max-width: 1180px) {
-      .hero-premium {
+      .home-hero {
         grid-template-columns: 1fr;
-        gap: 18px;
       }
 
-      .photo-zone {
+      .hero-photo-area {
         order: -1;
         min-height: 520px;
       }
 
-      .photo-zone img {
+      .hero-photo {
         right: 50%;
         transform: translateX(50%);
         height: 92%;
@@ -312,32 +284,32 @@
     }
 
     @media (max-width: 680px) {
-      .home-premium,
+      .home-page,
       .stats-grid,
       .section-separator {
         width: calc(100% - 28px);
       }
 
-      .hero-premium {
-        margin-top: 28px;
+      .home-page {
+        margin-top: 42px;
       }
 
-      .hero-copy h1 {
+      .hero-left h1 {
         font-size: clamp(46px, 13vw, 62px);
-        line-height: 1.03;
+        line-height: 1.04;
         letter-spacing: -.045em;
       }
 
-      .photo-zone {
+      .hero-photo-area {
         min-height: 430px;
       }
 
-      .photo-zone img {
+      .hero-photo {
         height: 96%;
       }
 
       .identity-card {
-        bottom: 22px;
+        bottom: 20px;
         padding: 18px 20px;
       }
 
@@ -370,10 +342,10 @@
   </header>
 
   <main>
-    <section class="home-premium">
-      <div class="hero-premium">
-        <div class="hero-copy">
-          <div class="hero-eyebrow">
+    <section class="home-page">
+      <div class="home-hero">
+        <div class="hero-left">
+          <div class="hero-badge">
             <span></span>
             Berini Consulting — Consultant transformation digitale, AMOA & adoption
           </div>
@@ -396,8 +368,8 @@
           </div>
         </div>
 
-        <div class="photo-zone">
-          <img src="assets/yacine-berini.jpg" alt="Portrait professionnel de Yacine Berini" />
+        <div class="hero-photo-area">
+          <img class="hero-photo" src="assets/yacine-berini.jpg" alt="Portrait professionnel de Yacine Berini" />
 
           <div class="identity-card">
             <strong>Yacine Berini</strong>
